@@ -37,15 +37,15 @@ const Cards$json = const {
   '1': 'Cards',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
-    const {'1': 'cards', '3': 2, '4': 3, '5': 11, '6': '.Card', '10': 'cards'},
+    const {'1': 'cards', '3': 2, '4': 3, '5': 11, '6': '.PaymentCard', '10': 'cards'},
   ],
 };
 
 /// Descriptor for `Cards`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List cardsDescriptor = $convert.base64Decode('CgVDYXJkcxIOCgJpZBgBIAEoBVICaWQSGwoFY2FyZHMYAiADKAsyBS5DYXJkUgVjYXJkcw==');
-@$core.Deprecated('Use cardDescriptor instead')
-const Card$json = const {
-  '1': 'Card',
+final $typed_data.Uint8List cardsDescriptor = $convert.base64Decode('CgVDYXJkcxIOCgJpZBgBIAEoBVICaWQSIgoFY2FyZHMYAiADKAsyDC5QYXltZW50Q2FyZFIFY2FyZHM=');
+@$core.Deprecated('Use paymentCardDescriptor instead')
+const PaymentCard$json = const {
+  '1': 'PaymentCard',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
     const {'1': 'bank_name', '3': 2, '4': 1, '5': 9, '10': 'bankName'},
@@ -57,8 +57,8 @@ const Card$json = const {
   ],
 };
 
-/// Descriptor for `Card`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List cardDescriptor = $convert.base64Decode('CgRDYXJkEg4KAmlkGAEgASgFUgJpZBIbCgliYW5rX25hbWUYAiABKAlSCGJhbmtOYW1lEiYKCWNhcmRfdHlwZRgDIAEoCzIJLkNhcmRUeXBlUghjYXJkVHlwZRIfCgtjYXJkX251bWJlchgEIAEoCVIKY2FyZE51bWJlchIYCgdleHBpcmVzGAUgASgJUgdleHBpcmVzEh8KC2hvbGRlcl9uYW1lGAYgASgJUgpob2xkZXJOYW1lEhAKA2N2dhgHIAEoCVIDY3Z2');
+/// Descriptor for `PaymentCard`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List paymentCardDescriptor = $convert.base64Decode('CgtQYXltZW50Q2FyZBIOCgJpZBgBIAEoBVICaWQSGwoJYmFua19uYW1lGAIgASgJUghiYW5rTmFtZRImCgljYXJkX3R5cGUYAyABKAsyCS5DYXJkVHlwZVIIY2FyZFR5cGUSHwoLY2FyZF9udW1iZXIYBCABKAlSCmNhcmROdW1iZXISGAoHZXhwaXJlcxgFIAEoCVIHZXhwaXJlcxIfCgtob2xkZXJfbmFtZRgGIAEoCVIKaG9sZGVyTmFtZRIQCgNjdnYYByABKAlSA2N2dg==');
 @$core.Deprecated('Use cardTypeDescriptor instead')
 const CardType$json = const {
   '1': 'CardType',

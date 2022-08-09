@@ -162,14 +162,14 @@ class UserDetails extends $pb.GeneratedMessage {
 class Cards extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Cards', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..pc<Card>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cards', $pb.PbFieldType.PM, subBuilder: Card.create)
+    ..pc<PaymentCard>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cards', $pb.PbFieldType.PM, subBuilder: PaymentCard.create)
     ..hasRequiredFields = false
   ;
 
   Cards._() : super();
   factory Cards({
     $core.int? id,
-    $core.Iterable<Card>? cards,
+    $core.Iterable<PaymentCard>? cards,
   }) {
     final _result = create();
     if (id != null) {
@@ -211,11 +211,11 @@ class Cards extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<Card> get cards => $_getList(1);
+  $core.List<PaymentCard> get cards => $_getList(1);
 }
 
-class Card extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Card', createEmptyInstance: create)
+class PaymentCard extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PaymentCard', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bankName')
     ..aOM<CardType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardType', subBuilder: CardType.create)
@@ -226,8 +226,8 @@ class Card extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  Card._() : super();
-  factory Card({
+  PaymentCard._() : super();
+  factory PaymentCard({
     $core.int? id,
     $core.String? bankName,
     CardType? cardType,
@@ -260,26 +260,26 @@ class Card extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Card.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Card.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory PaymentCard.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentCard.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Card clone() => Card()..mergeFromMessage(this);
+  PaymentCard clone() => PaymentCard()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Card copyWith(void Function(Card) updates) => super.copyWith((message) => updates(message as Card)) as Card; // ignore: deprecated_member_use
+  PaymentCard copyWith(void Function(PaymentCard) updates) => super.copyWith((message) => updates(message as PaymentCard)) as PaymentCard; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Card create() => Card._();
-  Card createEmptyInstance() => create();
-  static $pb.PbList<Card> createRepeated() => $pb.PbList<Card>();
+  static PaymentCard create() => PaymentCard._();
+  PaymentCard createEmptyInstance() => create();
+  static $pb.PbList<PaymentCard> createRepeated() => $pb.PbList<PaymentCard>();
   @$core.pragma('dart2js:noInline')
-  static Card getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Card>(create);
-  static Card? _defaultInstance;
+  static PaymentCard getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentCard>(create);
+  static PaymentCard? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
