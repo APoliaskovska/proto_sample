@@ -70,47 +70,57 @@ class User extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 }
 
-class Question extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Question', createEmptyInstance: create)
+class UserDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UserDetails', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'text')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'surname')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dateBirth')
     ..hasRequiredFields = false
   ;
 
-  Question._() : super();
-  factory Question({
+  UserDetails._() : super();
+  factory UserDetails({
     $core.int? id,
-    $core.String? text,
+    $core.String? name,
+    $core.String? surname,
+    $core.String? dateBirth,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (text != null) {
-      _result.text = text;
+    if (name != null) {
+      _result.name = name;
+    }
+    if (surname != null) {
+      _result.surname = surname;
+    }
+    if (dateBirth != null) {
+      _result.dateBirth = dateBirth;
     }
     return _result;
   }
-  factory Question.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Question.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory UserDetails.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserDetails.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Question clone() => Question()..mergeFromMessage(this);
+  UserDetails clone() => UserDetails()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Question copyWith(void Function(Question) updates) => super.copyWith((message) => updates(message as Question)) as Question; // ignore: deprecated_member_use
+  UserDetails copyWith(void Function(UserDetails) updates) => super.copyWith((message) => updates(message as UserDetails)) as UserDetails; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Question create() => Question._();
-  Question createEmptyInstance() => create();
-  static $pb.PbList<Question> createRepeated() => $pb.PbList<Question>();
+  static UserDetails create() => UserDetails._();
+  UserDetails createEmptyInstance() => create();
+  static $pb.PbList<UserDetails> createRepeated() => $pb.PbList<UserDetails>();
   @$core.pragma('dart2js:noInline')
-  static Question getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Question>(create);
-  static Question? _defaultInstance;
+  static UserDetails getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserDetails>(create);
+  static UserDetails? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
@@ -122,66 +132,74 @@ class Question extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get text => $_getSZ(1);
+  $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
-  set text($core.String v) { $_setString(1, v); }
+  set name($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasText() => $_has(1);
+  $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearText() => clearField(2);
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get surname => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set surname($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSurname() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSurname() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get dateBirth => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set dateBirth($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasDateBirth() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDateBirth() => clearField(4);
 }
 
-class Answer extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Answer', createEmptyInstance: create)
+class Cards extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Cards', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..aOM<User>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'student', subBuilder: User.create)
-    ..aOM<Question>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'question', subBuilder: Question.create)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'text')
+    ..pc<Card>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cards', $pb.PbFieldType.PM, subBuilder: Card.create)
     ..hasRequiredFields = false
   ;
 
-  Answer._() : super();
-  factory Answer({
+  Cards._() : super();
+  factory Cards({
     $core.int? id,
-    User? student,
-    Question? question,
-    $core.String? text,
+    $core.Iterable<Card>? cards,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (student != null) {
-      _result.student = student;
-    }
-    if (question != null) {
-      _result.question = question;
-    }
-    if (text != null) {
-      _result.text = text;
+    if (cards != null) {
+      _result.cards.addAll(cards);
     }
     return _result;
   }
-  factory Answer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Answer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Cards.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Cards.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Answer clone() => Answer()..mergeFromMessage(this);
+  Cards clone() => Cards()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Answer copyWith(void Function(Answer) updates) => super.copyWith((message) => updates(message as Answer)) as Answer; // ignore: deprecated_member_use
+  Cards copyWith(void Function(Cards) updates) => super.copyWith((message) => updates(message as Cards)) as Cards; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Answer create() => Answer._();
-  Answer createEmptyInstance() => create();
-  static $pb.PbList<Answer> createRepeated() => $pb.PbList<Answer>();
+  static Cards create() => Cards._();
+  Cards createEmptyInstance() => create();
+  static $pb.PbList<Cards> createRepeated() => $pb.PbList<Cards>();
   @$core.pragma('dart2js:noInline')
-  static Answer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Answer>(create);
-  static Answer? _defaultInstance;
+  static Cards getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cards>(create);
+  static Cards? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
@@ -193,83 +211,75 @@ class Answer extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  User get student => $_getN(1);
-  @$pb.TagNumber(2)
-  set student(User v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasStudent() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearStudent() => clearField(2);
-  @$pb.TagNumber(2)
-  User ensureStudent() => $_ensure(1);
-
-  @$pb.TagNumber(3)
-  Question get question => $_getN(2);
-  @$pb.TagNumber(3)
-  set question(Question v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasQuestion() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearQuestion() => clearField(3);
-  @$pb.TagNumber(3)
-  Question ensureQuestion() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $core.String get text => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set text($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasText() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearText() => clearField(4);
+  $core.List<Card> get cards => $_getList(1);
 }
 
-class Evaluation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Evaluation', createEmptyInstance: create)
+class Card extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Card', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answerId', $pb.PbFieldType.O3, protoName: 'answerId')
-    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mark', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bankName')
+    ..aOM<CardType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardType', subBuilder: CardType.create)
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardNumber')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expires')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'holderName')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cvv')
     ..hasRequiredFields = false
   ;
 
-  Evaluation._() : super();
-  factory Evaluation({
+  Card._() : super();
+  factory Card({
     $core.int? id,
-    $core.int? answerId,
-    $core.int? mark,
+    $core.String? bankName,
+    CardType? cardType,
+    $core.String? cardNumber,
+    $core.String? expires,
+    $core.String? holderName,
+    $core.String? cvv,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (answerId != null) {
-      _result.answerId = answerId;
+    if (bankName != null) {
+      _result.bankName = bankName;
     }
-    if (mark != null) {
-      _result.mark = mark;
+    if (cardType != null) {
+      _result.cardType = cardType;
+    }
+    if (cardNumber != null) {
+      _result.cardNumber = cardNumber;
+    }
+    if (expires != null) {
+      _result.expires = expires;
+    }
+    if (holderName != null) {
+      _result.holderName = holderName;
+    }
+    if (cvv != null) {
+      _result.cvv = cvv;
     }
     return _result;
   }
-  factory Evaluation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Evaluation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Card.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Card.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Evaluation clone() => Evaluation()..mergeFromMessage(this);
+  Card clone() => Card()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Evaluation copyWith(void Function(Evaluation) updates) => super.copyWith((message) => updates(message as Evaluation)) as Evaluation; // ignore: deprecated_member_use
+  Card copyWith(void Function(Card) updates) => super.copyWith((message) => updates(message as Card)) as Card; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Evaluation create() => Evaluation._();
-  Evaluation createEmptyInstance() => create();
-  static $pb.PbList<Evaluation> createRepeated() => $pb.PbList<Evaluation>();
+  static Card create() => Card._();
+  Card createEmptyInstance() => create();
+  static $pb.PbList<Card> createRepeated() => $pb.PbList<Card>();
   @$core.pragma('dart2js:noInline')
-  static Evaluation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Evaluation>(create);
-  static Evaluation? _defaultInstance;
+  static Card getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Card>(create);
+  static Card? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
@@ -281,84 +291,120 @@ class Evaluation extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.int get answerId => $_getIZ(1);
+  $core.String get bankName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set answerId($core.int v) { $_setSignedInt32(1, v); }
+  set bankName($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasAnswerId() => $_has(1);
+  $core.bool hasBankName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnswerId() => clearField(2);
+  void clearBankName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.int get mark => $_getIZ(2);
+  CardType get cardType => $_getN(2);
   @$pb.TagNumber(3)
-  set mark($core.int v) { $_setSignedInt32(2, v); }
+  set cardType(CardType v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasMark() => $_has(2);
+  $core.bool hasCardType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMark() => clearField(3);
+  void clearCardType() => clearField(3);
+  @$pb.TagNumber(3)
+  CardType ensureCardType() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get cardNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set cardNumber($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasCardNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCardNumber() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get expires => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set expires($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasExpires() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearExpires() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get holderName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set holderName($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasHolderName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearHolderName() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get cvv => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set cvv($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasCvv() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCvv() => clearField(7);
 }
 
-class AnsweredQuestion extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AnsweredQuestion', createEmptyInstance: create)
-    ..aOM<Question>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'question', subBuilder: Question.create)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answer')
+class CardType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CardType', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
     ..hasRequiredFields = false
   ;
 
-  AnsweredQuestion._() : super();
-  factory AnsweredQuestion({
-    Question? question,
-    $core.String? answer,
+  CardType._() : super();
+  factory CardType({
+    $core.int? id,
+    $core.String? type,
   }) {
     final _result = create();
-    if (question != null) {
-      _result.question = question;
+    if (id != null) {
+      _result.id = id;
     }
-    if (answer != null) {
-      _result.answer = answer;
+    if (type != null) {
+      _result.type = type;
     }
     return _result;
   }
-  factory AnsweredQuestion.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AnsweredQuestion.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CardType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CardType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AnsweredQuestion clone() => AnsweredQuestion()..mergeFromMessage(this);
+  CardType clone() => CardType()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AnsweredQuestion copyWith(void Function(AnsweredQuestion) updates) => super.copyWith((message) => updates(message as AnsweredQuestion)) as AnsweredQuestion; // ignore: deprecated_member_use
+  CardType copyWith(void Function(CardType) updates) => super.copyWith((message) => updates(message as CardType)) as CardType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static AnsweredQuestion create() => AnsweredQuestion._();
-  AnsweredQuestion createEmptyInstance() => create();
-  static $pb.PbList<AnsweredQuestion> createRepeated() => $pb.PbList<AnsweredQuestion>();
+  static CardType create() => CardType._();
+  CardType createEmptyInstance() => create();
+  static $pb.PbList<CardType> createRepeated() => $pb.PbList<CardType>();
   @$core.pragma('dart2js:noInline')
-  static AnsweredQuestion getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnsweredQuestion>(create);
-  static AnsweredQuestion? _defaultInstance;
+  static CardType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CardType>(create);
+  static CardType? _defaultInstance;
 
   @$pb.TagNumber(1)
-  Question get question => $_getN(0);
+  $core.int get id => $_getIZ(0);
   @$pb.TagNumber(1)
-  set question(Question v) { setField(1, v); }
+  set id($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasQuestion() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearQuestion() => clearField(1);
-  @$pb.TagNumber(1)
-  Question ensureQuestion() => $_ensure(0);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get answer => $_getSZ(1);
+  $core.String get type => $_getSZ(1);
   @$pb.TagNumber(2)
-  set answer($core.String v) { $_setString(1, v); }
+  set type($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasAnswer() => $_has(1);
+  $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnswer() => clearField(2);
+  void clearType() => clearField(2);
 }
 

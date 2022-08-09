@@ -19,50 +19,54 @@ const User$json = const {
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBISCgRuYW1lGAIgASgJUgRuYW1l');
-@$core.Deprecated('Use questionDescriptor instead')
-const Question$json = const {
-  '1': 'Question',
+@$core.Deprecated('Use userDetailsDescriptor instead')
+const UserDetails$json = const {
+  '1': 'UserDetails',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
-    const {'1': 'text', '3': 2, '4': 1, '5': 9, '10': 'text'},
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'surname', '3': 3, '4': 1, '5': 9, '10': 'surname'},
+    const {'1': 'date_birth', '3': 4, '4': 1, '5': 9, '10': 'dateBirth'},
   ],
 };
 
-/// Descriptor for `Question`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List questionDescriptor = $convert.base64Decode('CghRdWVzdGlvbhIOCgJpZBgBIAEoBVICaWQSEgoEdGV4dBgCIAEoCVIEdGV4dA==');
-@$core.Deprecated('Use answerDescriptor instead')
-const Answer$json = const {
-  '1': 'Answer',
+/// Descriptor for `UserDetails`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userDetailsDescriptor = $convert.base64Decode('CgtVc2VyRGV0YWlscxIOCgJpZBgBIAEoBVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIYCgdzdXJuYW1lGAMgASgJUgdzdXJuYW1lEh0KCmRhdGVfYmlydGgYBCABKAlSCWRhdGVCaXJ0aA==');
+@$core.Deprecated('Use cardsDescriptor instead')
+const Cards$json = const {
+  '1': 'Cards',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
-    const {'1': 'student', '3': 2, '4': 1, '5': 11, '6': '.User', '10': 'student'},
-    const {'1': 'question', '3': 3, '4': 1, '5': 11, '6': '.Question', '10': 'question'},
-    const {'1': 'text', '3': 4, '4': 1, '5': 9, '10': 'text'},
+    const {'1': 'cards', '3': 2, '4': 3, '5': 11, '6': '.Card', '10': 'cards'},
   ],
 };
 
-/// Descriptor for `Answer`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List answerDescriptor = $convert.base64Decode('CgZBbnN3ZXISDgoCaWQYASABKAVSAmlkEh8KB3N0dWRlbnQYAiABKAsyBS5Vc2VyUgdzdHVkZW50EiUKCHF1ZXN0aW9uGAMgASgLMgkuUXVlc3Rpb25SCHF1ZXN0aW9uEhIKBHRleHQYBCABKAlSBHRleHQ=');
-@$core.Deprecated('Use evaluationDescriptor instead')
-const Evaluation$json = const {
-  '1': 'Evaluation',
+/// Descriptor for `Cards`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cardsDescriptor = $convert.base64Decode('CgVDYXJkcxIOCgJpZBgBIAEoBVICaWQSGwoFY2FyZHMYAiADKAsyBS5DYXJkUgVjYXJkcw==');
+@$core.Deprecated('Use cardDescriptor instead')
+const Card$json = const {
+  '1': 'Card',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
-    const {'1': 'answerId', '3': 2, '4': 1, '5': 5, '10': 'answerId'},
-    const {'1': 'mark', '3': 3, '4': 1, '5': 5, '10': 'mark'},
+    const {'1': 'bank_name', '3': 2, '4': 1, '5': 9, '10': 'bankName'},
+    const {'1': 'card_type', '3': 3, '4': 1, '5': 11, '6': '.CardType', '10': 'cardType'},
+    const {'1': 'card_number', '3': 4, '4': 1, '5': 9, '10': 'cardNumber'},
+    const {'1': 'expires', '3': 5, '4': 1, '5': 9, '10': 'expires'},
+    const {'1': 'holder_name', '3': 6, '4': 1, '5': 9, '10': 'holderName'},
+    const {'1': 'cvv', '3': 7, '4': 1, '5': 9, '10': 'cvv'},
   ],
 };
 
-/// Descriptor for `Evaluation`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List evaluationDescriptor = $convert.base64Decode('CgpFdmFsdWF0aW9uEg4KAmlkGAEgASgFUgJpZBIaCghhbnN3ZXJJZBgCIAEoBVIIYW5zd2VySWQSEgoEbWFyaxgDIAEoBVIEbWFyaw==');
-@$core.Deprecated('Use answeredQuestionDescriptor instead')
-const AnsweredQuestion$json = const {
-  '1': 'AnsweredQuestion',
+/// Descriptor for `Card`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cardDescriptor = $convert.base64Decode('CgRDYXJkEg4KAmlkGAEgASgFUgJpZBIbCgliYW5rX25hbWUYAiABKAlSCGJhbmtOYW1lEiYKCWNhcmRfdHlwZRgDIAEoCzIJLkNhcmRUeXBlUghjYXJkVHlwZRIfCgtjYXJkX251bWJlchgEIAEoCVIKY2FyZE51bWJlchIYCgdleHBpcmVzGAUgASgJUgdleHBpcmVzEh8KC2hvbGRlcl9uYW1lGAYgASgJUgpob2xkZXJOYW1lEhAKA2N2dhgHIAEoCVIDY3Z2');
+@$core.Deprecated('Use cardTypeDescriptor instead')
+const CardType$json = const {
+  '1': 'CardType',
   '2': const [
-    const {'1': 'question', '3': 1, '4': 1, '5': 11, '6': '.Question', '10': 'question'},
-    const {'1': 'answer', '3': 2, '4': 1, '5': 9, '10': 'answer'},
+    const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
+    const {'1': 'type', '3': 2, '4': 1, '5': 9, '10': 'type'},
   ],
 };
 
-/// Descriptor for `AnsweredQuestion`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List answeredQuestionDescriptor = $convert.base64Decode('ChBBbnN3ZXJlZFF1ZXN0aW9uEiUKCHF1ZXN0aW9uGAEgASgLMgkuUXVlc3Rpb25SCHF1ZXN0aW9uEhYKBmFuc3dlchgCIAEoCVIGYW5zd2Vy');
+/// Descriptor for `CardType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cardTypeDescriptor = $convert.base64Decode('CghDYXJkVHlwZRIOCgJpZBgBIAEoBVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZQ==');
