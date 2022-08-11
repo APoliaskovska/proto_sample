@@ -408,3 +408,50 @@ class CardType extends $pb.GeneratedMessage {
   void clearType() => clearField(2);
 }
 
+class AvatarImage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AvatarImage', createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'image', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  AvatarImage._() : super();
+  factory AvatarImage({
+    $core.List<$core.int>? image,
+  }) {
+    final _result = create();
+    if (image != null) {
+      _result.image = image;
+    }
+    return _result;
+  }
+  factory AvatarImage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AvatarImage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AvatarImage clone() => AvatarImage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AvatarImage copyWith(void Function(AvatarImage) updates) => super.copyWith((message) => updates(message as AvatarImage)) as AvatarImage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AvatarImage create() => AvatarImage._();
+  AvatarImage createEmptyInstance() => create();
+  static $pb.PbList<AvatarImage> createRepeated() => $pb.PbList<AvatarImage>();
+  @$core.pragma('dart2js:noInline')
+  static AvatarImage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AvatarImage>(create);
+  static AvatarImage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get image => $_getN(0);
+  @$pb.TagNumber(1)
+  set image($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasImage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearImage() => clearField(1);
+}
+

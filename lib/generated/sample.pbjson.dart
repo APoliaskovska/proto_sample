@@ -70,3 +70,13 @@ const CardType$json = const {
 
 /// Descriptor for `CardType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cardTypeDescriptor = $convert.base64Decode('CghDYXJkVHlwZRIOCgJpZBgBIAEoBVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZQ==');
+@$core.Deprecated('Use avatarImageDescriptor instead')
+const AvatarImage$json = const {
+  '1': 'AvatarImage',
+  '2': const [
+    const {'1': 'image', '3': 1, '4': 1, '5': 12, '10': 'image'},
+  ],
+};
+
+/// Descriptor for `AvatarImage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List avatarImageDescriptor = $convert.base64Decode('CgtBdmF0YXJJbWFnZRIUCgVpbWFnZRgBIAEoDFIFaW1hZ2U=');

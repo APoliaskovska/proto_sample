@@ -32,9 +32,14 @@ message CardType {
   string type = 2;
 }
 
+message AvatarImage {
+  bytes image = 1;
+}
+
 service Sample {
   rpc getUserDetails(User) returns(UserDetails) {}
   rpc getCards(User) returns(Cards) {}
+  rpc getUserAvatar(User) returns(AvatarImage) {}
 }
 
 
