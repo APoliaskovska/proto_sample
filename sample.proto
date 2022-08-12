@@ -2,12 +2,12 @@ syntax = "proto3";
 
 message User {
   int32 id = 1;
-  string name = 2;
+  string login = 2;
   string token = 3;
 }
 
 message AuthRequest {
-  int32 login = 1;
+  string login = 1;
   string password = 2;
   string system = 3;
   string deviceId = 4;

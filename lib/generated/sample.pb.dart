@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
     ..hasRequiredFields = false
   ;
@@ -20,15 +20,15 @@ class User extends $pb.GeneratedMessage {
   User._() : super();
   factory User({
     $core.int? id,
-    $core.String? name,
+    $core.String? login,
     $core.String? token,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (name != null) {
-      _result.name = name;
+    if (login != null) {
+      _result.login = login;
     }
     if (token != null) {
       _result.token = token;
@@ -66,13 +66,13 @@ class User extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $core.String get login => $_getSZ(1);
   @$pb.TagNumber(2)
-  set name($core.String v) { $_setString(1, v); }
+  set login($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasLogin() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearLogin() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get token => $_getSZ(2);
@@ -86,7 +86,7 @@ class User extends $pb.GeneratedMessage {
 
 class AuthRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthRequest', createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login', $pb.PbFieldType.O3)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'password')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'system')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deviceId', protoName: 'deviceId')
@@ -95,7 +95,7 @@ class AuthRequest extends $pb.GeneratedMessage {
 
   AuthRequest._() : super();
   factory AuthRequest({
-    $core.int? login,
+    $core.String? login,
     $core.String? password,
     $core.String? system,
     $core.String? deviceId,
@@ -137,9 +137,9 @@ class AuthRequest extends $pb.GeneratedMessage {
   static AuthRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.int get login => $_getIZ(0);
+  $core.String get login => $_getSZ(0);
   @$pb.TagNumber(1)
-  set login($core.int v) { $_setSignedInt32(0, v); }
+  set login($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasLogin() => $_has(0);
   @$pb.TagNumber(1)
