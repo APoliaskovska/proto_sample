@@ -13,6 +13,7 @@ class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
     ..hasRequiredFields = false
   ;
 
@@ -20,6 +21,7 @@ class User extends $pb.GeneratedMessage {
   factory User({
     $core.int? id,
     $core.String? name,
+    $core.String? token,
   }) {
     final _result = create();
     if (id != null) {
@@ -27,6 +29,9 @@ class User extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (token != null) {
+      _result.token = token;
     }
     return _result;
   }
@@ -68,6 +73,104 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get token => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set token($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearToken() => clearField(3);
+}
+
+class AuthRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthRequest', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'password')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'system')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deviceId', protoName: 'deviceId')
+    ..hasRequiredFields = false
+  ;
+
+  AuthRequest._() : super();
+  factory AuthRequest({
+    $core.int? login,
+    $core.String? password,
+    $core.String? system,
+    $core.String? deviceId,
+  }) {
+    final _result = create();
+    if (login != null) {
+      _result.login = login;
+    }
+    if (password != null) {
+      _result.password = password;
+    }
+    if (system != null) {
+      _result.system = system;
+    }
+    if (deviceId != null) {
+      _result.deviceId = deviceId;
+    }
+    return _result;
+  }
+  factory AuthRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AuthRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AuthRequest clone() => AuthRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AuthRequest copyWith(void Function(AuthRequest) updates) => super.copyWith((message) => updates(message as AuthRequest)) as AuthRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AuthRequest create() => AuthRequest._();
+  AuthRequest createEmptyInstance() => create();
+  static $pb.PbList<AuthRequest> createRepeated() => $pb.PbList<AuthRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AuthRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuthRequest>(create);
+  static AuthRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get login => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set login($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasLogin() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLogin() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get password => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set password($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPassword() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPassword() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get system => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set system($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSystem() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSystem() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get deviceId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set deviceId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasDeviceId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDeviceId() => clearField(4);
 }
 
 class UserDetails extends $pb.GeneratedMessage {

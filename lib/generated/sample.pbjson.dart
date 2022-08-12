@@ -14,11 +14,25 @@ const User$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'token', '3': 3, '4': 1, '5': 9, '10': 'token'},
   ],
 };
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBISCgRuYW1lGAIgASgJUgRuYW1l');
+final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhQKBXRva2VuGAMgASgJUgV0b2tlbg==');
+@$core.Deprecated('Use authRequestDescriptor instead')
+const AuthRequest$json = const {
+  '1': 'AuthRequest',
+  '2': const [
+    const {'1': 'login', '3': 1, '4': 1, '5': 5, '10': 'login'},
+    const {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
+    const {'1': 'system', '3': 3, '4': 1, '5': 9, '10': 'system'},
+    const {'1': 'deviceId', '3': 4, '4': 1, '5': 9, '10': 'deviceId'},
+  ],
+};
+
+/// Descriptor for `AuthRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List authRequestDescriptor = $convert.base64Decode('CgtBdXRoUmVxdWVzdBIUCgVsb2dpbhgBIAEoBVIFbG9naW4SGgoIcGFzc3dvcmQYAiABKAlSCHBhc3N3b3JkEhYKBnN5c3RlbRgDIAEoCVIGc3lzdGVtEhoKCGRldmljZUlkGAQgASgJUghkZXZpY2VJZA==');
 @$core.Deprecated('Use userDetailsDescriptor instead')
 const UserDetails$json = const {
   '1': 'UserDetails',

@@ -3,6 +3,14 @@ syntax = "proto3";
 message User {
   int32 id = 1;
   string name = 2;
+  string token = 3;
+}
+
+message AuthRequest {
+  int32 login = 1;
+  string password = 2;
+  string system = 3;
+  string deviceId = 4;
 }
 
 message UserDetails {
@@ -40,6 +48,7 @@ service Sample {
   rpc getUserDetails(User) returns(UserDetails) {}
   rpc getCards(User) returns(Cards) {}
   rpc getUserAvatar(User) returns(AvatarImage) {}
+  rpc loginWith(AuthRequest) returns(User) {}
 }
 
 

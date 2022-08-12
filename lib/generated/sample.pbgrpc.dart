@@ -26,6 +26,10 @@ class SampleClient extends $grpc.Client {
       '/Sample/getUserAvatar',
       ($0.User value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.AvatarImage.fromBuffer(value));
+  static final _$loginWith = $grpc.ClientMethod<$0.AuthRequest, $0.User>(
+      '/Sample/loginWith',
+      ($0.AuthRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.User.fromBuffer(value));
 
   SampleClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -45,6 +49,11 @@ class SampleClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.AvatarImage> getUserAvatar($0.User request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getUserAvatar, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.User> loginWith($0.AuthRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$loginWith, request, options: options);
   }
 }
 
@@ -73,6 +82,13 @@ abstract class SampleServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.User.fromBuffer(value),
         ($0.AvatarImage value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AuthRequest, $0.User>(
+        'loginWith',
+        loginWith_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.AuthRequest.fromBuffer(value),
+        ($0.User value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.UserDetails> getUserDetails_Pre(
@@ -90,9 +106,16 @@ abstract class SampleServiceBase extends $grpc.Service {
     return getUserAvatar(call, await request);
   }
 
+  $async.Future<$0.User> loginWith_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.AuthRequest> request) async {
+    return loginWith(call, await request);
+  }
+
   $async.Future<$0.UserDetails> getUserDetails(
       $grpc.ServiceCall call, $0.User request);
   $async.Future<$0.Cards> getCards($grpc.ServiceCall call, $0.User request);
   $async.Future<$0.AvatarImage> getUserAvatar(
       $grpc.ServiceCall call, $0.User request);
+  $async.Future<$0.User> loginWith(
+      $grpc.ServiceCall call, $0.AuthRequest request);
 }
