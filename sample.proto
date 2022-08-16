@@ -54,19 +54,19 @@ message TransactionsListRequest {
 
 message TransactionsList {
   int32 card_id = 1;
-  repeated Transaction transactions = 2;
+  repeated Transaction transactions_list = 2;
 }
 
 message Transaction {
   int32 id = 1;
   string date = 2;
   string status = 3;
-  string referenceNumber = 4;
+  string reference_number = 4;
   float fee = 5;
   float amount = 6;
   string currency = 7;
   string details = 8;
-  string accountNumber = 9;
+  string account_number = 9;
   string type = 10;
 }
 

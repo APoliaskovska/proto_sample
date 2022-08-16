@@ -608,21 +608,21 @@ class TransactionsListRequest extends $pb.GeneratedMessage {
 class TransactionsList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsList', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardId', $pb.PbFieldType.O3)
-    ..pc<Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: Transaction.create)
+    ..pc<Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionsList', $pb.PbFieldType.PM, subBuilder: Transaction.create)
     ..hasRequiredFields = false
   ;
 
   TransactionsList._() : super();
   factory TransactionsList({
     $core.int? cardId,
-    $core.Iterable<Transaction>? transactions,
+    $core.Iterable<Transaction>? transactionsList,
   }) {
     final _result = create();
     if (cardId != null) {
       _result.cardId = cardId;
     }
-    if (transactions != null) {
-      _result.transactions.addAll(transactions);
+    if (transactionsList != null) {
+      _result.transactionsList.addAll(transactionsList);
     }
     return _result;
   }
@@ -657,7 +657,7 @@ class TransactionsList extends $pb.GeneratedMessage {
   void clearCardId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<Transaction> get transactions => $_getList(1);
+  $core.List<Transaction> get transactionsList => $_getList(1);
 }
 
 class Transaction extends $pb.GeneratedMessage {
@@ -665,12 +665,12 @@ class Transaction extends $pb.GeneratedMessage {
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referenceNumber', protoName: 'referenceNumber')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referenceNumber')
     ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', $pb.PbFieldType.OF)
     ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OF)
     ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
     ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'details')
-    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountNumber', protoName: 'accountNumber')
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountNumber')
     ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
     ..hasRequiredFields = false
   ;

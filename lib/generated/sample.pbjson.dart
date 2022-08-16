@@ -109,12 +109,12 @@ const TransactionsList$json = const {
   '1': 'TransactionsList',
   '2': const [
     const {'1': 'card_id', '3': 1, '4': 1, '5': 5, '10': 'cardId'},
-    const {'1': 'transactions', '3': 2, '4': 3, '5': 11, '6': '.Transaction', '10': 'transactions'},
+    const {'1': 'transactions_list', '3': 2, '4': 3, '5': 11, '6': '.Transaction', '10': 'transactionsList'},
   ],
 };
 
 /// Descriptor for `TransactionsList`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List transactionsListDescriptor = $convert.base64Decode('ChBUcmFuc2FjdGlvbnNMaXN0EhcKB2NhcmRfaWQYASABKAVSBmNhcmRJZBIwCgx0cmFuc2FjdGlvbnMYAiADKAsyDC5UcmFuc2FjdGlvblIMdHJhbnNhY3Rpb25z');
+final $typed_data.Uint8List transactionsListDescriptor = $convert.base64Decode('ChBUcmFuc2FjdGlvbnNMaXN0EhcKB2NhcmRfaWQYASABKAVSBmNhcmRJZBI5ChF0cmFuc2FjdGlvbnNfbGlzdBgCIAMoCzIMLlRyYW5zYWN0aW9uUhB0cmFuc2FjdGlvbnNMaXN0');
 @$core.Deprecated('Use transactionDescriptor instead')
 const Transaction$json = const {
   '1': 'Transaction',
@@ -122,15 +122,15 @@ const Transaction$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
     const {'1': 'date', '3': 2, '4': 1, '5': 9, '10': 'date'},
     const {'1': 'status', '3': 3, '4': 1, '5': 9, '10': 'status'},
-    const {'1': 'referenceNumber', '3': 4, '4': 1, '5': 9, '10': 'referenceNumber'},
+    const {'1': 'reference_number', '3': 4, '4': 1, '5': 9, '10': 'referenceNumber'},
     const {'1': 'fee', '3': 5, '4': 1, '5': 2, '10': 'fee'},
     const {'1': 'amount', '3': 6, '4': 1, '5': 2, '10': 'amount'},
     const {'1': 'currency', '3': 7, '4': 1, '5': 9, '10': 'currency'},
     const {'1': 'details', '3': 8, '4': 1, '5': 9, '10': 'details'},
-    const {'1': 'accountNumber', '3': 9, '4': 1, '5': 9, '10': 'accountNumber'},
+    const {'1': 'account_number', '3': 9, '4': 1, '5': 9, '10': 'accountNumber'},
     const {'1': 'type', '3': 10, '4': 1, '5': 9, '10': 'type'},
   ],
 };
 
 /// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhIOCgJpZBgBIAEoBVICaWQSEgoEZGF0ZRgCIAEoCVIEZGF0ZRIWCgZzdGF0dXMYAyABKAlSBnN0YXR1cxIoCg9yZWZlcmVuY2VOdW1iZXIYBCABKAlSD3JlZmVyZW5jZU51bWJlchIQCgNmZWUYBSABKAJSA2ZlZRIWCgZhbW91bnQYBiABKAJSBmFtb3VudBIaCghjdXJyZW5jeRgHIAEoCVIIY3VycmVuY3kSGAoHZGV0YWlscxgIIAEoCVIHZGV0YWlscxIkCg1hY2NvdW50TnVtYmVyGAkgASgJUg1hY2NvdW50TnVtYmVyEhIKBHR5cGUYCiABKAlSBHR5cGU=');
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhIOCgJpZBgBIAEoBVICaWQSEgoEZGF0ZRgCIAEoCVIEZGF0ZRIWCgZzdGF0dXMYAyABKAlSBnN0YXR1cxIpChByZWZlcmVuY2VfbnVtYmVyGAQgASgJUg9yZWZlcmVuY2VOdW1iZXISEAoDZmVlGAUgASgCUgNmZWUSFgoGYW1vdW50GAYgASgCUgZhbW91bnQSGgoIY3VycmVuY3kYByABKAlSCGN1cnJlbmN5EhgKB2RldGFpbHMYCCABKAlSB2RldGFpbHMSJQoOYWNjb3VudF9udW1iZXIYCSABKAlSDWFjY291bnROdW1iZXISEgoEdHlwZRgKIAEoCVIEdHlwZQ==');
