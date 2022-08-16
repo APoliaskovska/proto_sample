@@ -1,11 +1,4 @@
 syntax = "proto3";
-
-message User {
-  int32 id = 1;
-  string login = 2;
-  string token = 3;
-}
-
 message AuthRequest {
   string login = 1;
   string password = 2;
@@ -13,12 +6,25 @@ message AuthRequest {
   string deviceId = 4;
 }
 
+// USER MODEL
 message UserDetails {
   int32 id = 1;
   string name = 2;
   string surname = 3;
   string date_birth = 4;
 }
+
+message AvatarImage {
+  bytes image = 1;
+}
+
+message User {
+  int32 id = 1;
+  string login = 2;
+  string token = 3;
+}
+
+// PAYMENT CARDS MODEL
 
 message Cards {
   int32 id = 1;
@@ -40,15 +46,46 @@ message CardType {
   string type = 2;
 }
 
-message AvatarImage {
-  bytes image = 1;
+// TRANSACTIONS MODEL
+
+message TransactionsListRequest {
+  int32 card_id = 1;
 }
 
+message TransactionsList {
+  int32 card_id = 1;
+  repeated Transaction transactions = 2;
+}
+
+message Transaction {
+  int32 id = 1;
+  string date = 2;
+  string status = 3;
+  string referenceNumber = 4;
+  float fee = 5;
+  float amount = 6;
+  string currency = 7;
+  string details = 8;
+  string accountNumber = 9;
+  string type = 10;
+}
+
+// endregion
+
 service Sample {
-  rpc getUserDetails(User) returns(UserDetails) {}
-  rpc getCards(User) returns(Cards) {}
-  rpc getUserAvatar(User) returns(AvatarImage) {}
+  //LOGIN
+
   rpc loginWith(AuthRequest) returns(User) {}
+
+  //USER
+
+  rpc getUserDetails(User) returns(UserDetails) {}
+  rpc getUserAvatar(User) returns(AvatarImage) {}
+
+  //CARDS
+
+  rpc getCards(User) returns(Cards) {}
+  rpc getTransactionsList(TransactionsListRequest) returns(TransactionsList) {}
 }
 
 

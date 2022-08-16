@@ -9,81 +9,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class User extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User', createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
-    ..hasRequiredFields = false
-  ;
-
-  User._() : super();
-  factory User({
-    $core.int? id,
-    $core.String? login,
-    $core.String? token,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    if (login != null) {
-      _result.login = login;
-    }
-    if (token != null) {
-      _result.token = token;
-    }
-    return _result;
-  }
-  factory User.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory User.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  User clone() => User()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  User copyWith(void Function(User) updates) => super.copyWith((message) => updates(message as User)) as User; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static User create() => User._();
-  User createEmptyInstance() => create();
-  static $pb.PbList<User> createRepeated() => $pb.PbList<User>();
-  @$core.pragma('dart2js:noInline')
-  static User getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<User>(create);
-  static User? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get id => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set id($core.int v) { $_setSignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get login => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set login($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasLogin() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearLogin() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get token => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set token($core.String v) { $_setString(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasToken() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearToken() => clearField(3);
-}
-
 class AuthRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AuthRequest', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login')
@@ -260,6 +185,128 @@ class UserDetails extends $pb.GeneratedMessage {
   $core.bool hasDateBirth() => $_has(3);
   @$pb.TagNumber(4)
   void clearDateBirth() => clearField(4);
+}
+
+class AvatarImage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AvatarImage', createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'image', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  AvatarImage._() : super();
+  factory AvatarImage({
+    $core.List<$core.int>? image,
+  }) {
+    final _result = create();
+    if (image != null) {
+      _result.image = image;
+    }
+    return _result;
+  }
+  factory AvatarImage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AvatarImage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AvatarImage clone() => AvatarImage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AvatarImage copyWith(void Function(AvatarImage) updates) => super.copyWith((message) => updates(message as AvatarImage)) as AvatarImage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AvatarImage create() => AvatarImage._();
+  AvatarImage createEmptyInstance() => create();
+  static $pb.PbList<AvatarImage> createRepeated() => $pb.PbList<AvatarImage>();
+  @$core.pragma('dart2js:noInline')
+  static AvatarImage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AvatarImage>(create);
+  static AvatarImage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get image => $_getN(0);
+  @$pb.TagNumber(1)
+  set image($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasImage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearImage() => clearField(1);
+}
+
+class User extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  User._() : super();
+  factory User({
+    $core.int? id,
+    $core.String? login,
+    $core.String? token,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (login != null) {
+      _result.login = login;
+    }
+    if (token != null) {
+      _result.token = token;
+    }
+    return _result;
+  }
+  factory User.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory User.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  User clone() => User()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  User copyWith(void Function(User) updates) => super.copyWith((message) => updates(message as User)) as User; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static User create() => User._();
+  User createEmptyInstance() => create();
+  static $pb.PbList<User> createRepeated() => $pb.PbList<User>();
+  @$core.pragma('dart2js:noInline')
+  static User getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<User>(create);
+  static User? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set id($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get login => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set login($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLogin() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLogin() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get token => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set token($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearToken() => clearField(3);
 }
 
 class Cards extends $pb.GeneratedMessage {
@@ -511,50 +558,278 @@ class CardType extends $pb.GeneratedMessage {
   void clearType() => clearField(2);
 }
 
-class AvatarImage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AvatarImage', createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'image', $pb.PbFieldType.OY)
+class TransactionsListRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsListRequest', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
-  AvatarImage._() : super();
-  factory AvatarImage({
-    $core.List<$core.int>? image,
+  TransactionsListRequest._() : super();
+  factory TransactionsListRequest({
+    $core.int? cardId,
   }) {
     final _result = create();
-    if (image != null) {
-      _result.image = image;
+    if (cardId != null) {
+      _result.cardId = cardId;
     }
     return _result;
   }
-  factory AvatarImage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AvatarImage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory TransactionsListRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionsListRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AvatarImage clone() => AvatarImage()..mergeFromMessage(this);
+  TransactionsListRequest clone() => TransactionsListRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AvatarImage copyWith(void Function(AvatarImage) updates) => super.copyWith((message) => updates(message as AvatarImage)) as AvatarImage; // ignore: deprecated_member_use
+  TransactionsListRequest copyWith(void Function(TransactionsListRequest) updates) => super.copyWith((message) => updates(message as TransactionsListRequest)) as TransactionsListRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static AvatarImage create() => AvatarImage._();
-  AvatarImage createEmptyInstance() => create();
-  static $pb.PbList<AvatarImage> createRepeated() => $pb.PbList<AvatarImage>();
+  static TransactionsListRequest create() => TransactionsListRequest._();
+  TransactionsListRequest createEmptyInstance() => create();
+  static $pb.PbList<TransactionsListRequest> createRepeated() => $pb.PbList<TransactionsListRequest>();
   @$core.pragma('dart2js:noInline')
-  static AvatarImage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AvatarImage>(create);
-  static AvatarImage? _defaultInstance;
+  static TransactionsListRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionsListRequest>(create);
+  static TransactionsListRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$core.int> get image => $_getN(0);
+  $core.int get cardId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set image($core.List<$core.int> v) { $_setBytes(0, v); }
+  set cardId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasImage() => $_has(0);
+  $core.bool hasCardId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImage() => clearField(1);
+  void clearCardId() => clearField(1);
+}
+
+class TransactionsList extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionsList', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cardId', $pb.PbFieldType.O3)
+    ..pc<Transaction>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: Transaction.create)
+    ..hasRequiredFields = false
+  ;
+
+  TransactionsList._() : super();
+  factory TransactionsList({
+    $core.int? cardId,
+    $core.Iterable<Transaction>? transactions,
+  }) {
+    final _result = create();
+    if (cardId != null) {
+      _result.cardId = cardId;
+    }
+    if (transactions != null) {
+      _result.transactions.addAll(transactions);
+    }
+    return _result;
+  }
+  factory TransactionsList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionsList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TransactionsList clone() => TransactionsList()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionsList copyWith(void Function(TransactionsList) updates) => super.copyWith((message) => updates(message as TransactionsList)) as TransactionsList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransactionsList create() => TransactionsList._();
+  TransactionsList createEmptyInstance() => create();
+  static $pb.PbList<TransactionsList> createRepeated() => $pb.PbList<TransactionsList>();
+  @$core.pragma('dart2js:noInline')
+  static TransactionsList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionsList>(create);
+  static TransactionsList? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get cardId => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set cardId($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCardId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCardId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<Transaction> get transactions => $_getList(1);
+}
+
+class Transaction extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Transaction', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referenceNumber', protoName: 'referenceNumber')
+    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OF)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'details')
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountNumber', protoName: 'accountNumber')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
+    ..hasRequiredFields = false
+  ;
+
+  Transaction._() : super();
+  factory Transaction({
+    $core.int? id,
+    $core.String? date,
+    $core.String? status,
+    $core.String? referenceNumber,
+    $core.double? fee,
+    $core.double? amount,
+    $core.String? currency,
+    $core.String? details,
+    $core.String? accountNumber,
+    $core.String? type,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (date != null) {
+      _result.date = date;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (referenceNumber != null) {
+      _result.referenceNumber = referenceNumber;
+    }
+    if (fee != null) {
+      _result.fee = fee;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (currency != null) {
+      _result.currency = currency;
+    }
+    if (details != null) {
+      _result.details = details;
+    }
+    if (accountNumber != null) {
+      _result.accountNumber = accountNumber;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    return _result;
+  }
+  factory Transaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Transaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Transaction clone() => Transaction()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)) as Transaction; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Transaction create() => Transaction._();
+  Transaction createEmptyInstance() => create();
+  static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
+  @$core.pragma('dart2js:noInline')
+  static Transaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
+  static Transaction? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set id($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get date => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set date($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDate() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get status => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set status($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStatus() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get referenceNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set referenceNumber($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasReferenceNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReferenceNumber() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.double get fee => $_getN(4);
+  @$pb.TagNumber(5)
+  set fee($core.double v) { $_setFloat(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFee() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearFee() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get amount => $_getN(5);
+  @$pb.TagNumber(6)
+  set amount($core.double v) { $_setFloat(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAmount() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAmount() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get currency => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set currency($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasCurrency() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCurrency() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get details => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set details($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasDetails() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDetails() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get accountNumber => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set accountNumber($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasAccountNumber() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearAccountNumber() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get type => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set type($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasType() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearType() => clearField(10);
 }
 

@@ -8,18 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use userDescriptor instead')
-const User$json = const {
-  '1': 'User',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
-    const {'1': 'login', '3': 2, '4': 1, '5': 9, '10': 'login'},
-    const {'1': 'token', '3': 3, '4': 1, '5': 9, '10': 'token'},
-  ],
-};
-
-/// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBIUCgVsb2dpbhgCIAEoCVIFbG9naW4SFAoFdG9rZW4YAyABKAlSBXRva2Vu');
 @$core.Deprecated('Use authRequestDescriptor instead')
 const AuthRequest$json = const {
   '1': 'AuthRequest',
@@ -46,6 +34,28 @@ const UserDetails$json = const {
 
 /// Descriptor for `UserDetails`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDetailsDescriptor = $convert.base64Decode('CgtVc2VyRGV0YWlscxIOCgJpZBgBIAEoBVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIYCgdzdXJuYW1lGAMgASgJUgdzdXJuYW1lEh0KCmRhdGVfYmlydGgYBCABKAlSCWRhdGVCaXJ0aA==');
+@$core.Deprecated('Use avatarImageDescriptor instead')
+const AvatarImage$json = const {
+  '1': 'AvatarImage',
+  '2': const [
+    const {'1': 'image', '3': 1, '4': 1, '5': 12, '10': 'image'},
+  ],
+};
+
+/// Descriptor for `AvatarImage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List avatarImageDescriptor = $convert.base64Decode('CgtBdmF0YXJJbWFnZRIUCgVpbWFnZRgBIAEoDFIFaW1hZ2U=');
+@$core.Deprecated('Use userDescriptor instead')
+const User$json = const {
+  '1': 'User',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
+    const {'1': 'login', '3': 2, '4': 1, '5': 9, '10': 'login'},
+    const {'1': 'token', '3': 3, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBIUCgVsb2dpbhgCIAEoCVIFbG9naW4SFAoFdG9rZW4YAyABKAlSBXRva2Vu');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',
@@ -84,13 +94,43 @@ const CardType$json = const {
 
 /// Descriptor for `CardType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cardTypeDescriptor = $convert.base64Decode('CghDYXJkVHlwZRIOCgJpZBgBIAEoBVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZQ==');
-@$core.Deprecated('Use avatarImageDescriptor instead')
-const AvatarImage$json = const {
-  '1': 'AvatarImage',
+@$core.Deprecated('Use transactionsListRequestDescriptor instead')
+const TransactionsListRequest$json = const {
+  '1': 'TransactionsListRequest',
   '2': const [
-    const {'1': 'image', '3': 1, '4': 1, '5': 12, '10': 'image'},
+    const {'1': 'card_id', '3': 1, '4': 1, '5': 5, '10': 'cardId'},
   ],
 };
 
-/// Descriptor for `AvatarImage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List avatarImageDescriptor = $convert.base64Decode('CgtBdmF0YXJJbWFnZRIUCgVpbWFnZRgBIAEoDFIFaW1hZ2U=');
+/// Descriptor for `TransactionsListRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionsListRequestDescriptor = $convert.base64Decode('ChdUcmFuc2FjdGlvbnNMaXN0UmVxdWVzdBIXCgdjYXJkX2lkGAEgASgFUgZjYXJkSWQ=');
+@$core.Deprecated('Use transactionsListDescriptor instead')
+const TransactionsList$json = const {
+  '1': 'TransactionsList',
+  '2': const [
+    const {'1': 'card_id', '3': 1, '4': 1, '5': 5, '10': 'cardId'},
+    const {'1': 'transactions', '3': 2, '4': 3, '5': 11, '6': '.Transaction', '10': 'transactions'},
+  ],
+};
+
+/// Descriptor for `TransactionsList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionsListDescriptor = $convert.base64Decode('ChBUcmFuc2FjdGlvbnNMaXN0EhcKB2NhcmRfaWQYASABKAVSBmNhcmRJZBIwCgx0cmFuc2FjdGlvbnMYAiADKAsyDC5UcmFuc2FjdGlvblIMdHJhbnNhY3Rpb25z');
+@$core.Deprecated('Use transactionDescriptor instead')
+const Transaction$json = const {
+  '1': 'Transaction',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
+    const {'1': 'date', '3': 2, '4': 1, '5': 9, '10': 'date'},
+    const {'1': 'status', '3': 3, '4': 1, '5': 9, '10': 'status'},
+    const {'1': 'referenceNumber', '3': 4, '4': 1, '5': 9, '10': 'referenceNumber'},
+    const {'1': 'fee', '3': 5, '4': 1, '5': 2, '10': 'fee'},
+    const {'1': 'amount', '3': 6, '4': 1, '5': 2, '10': 'amount'},
+    const {'1': 'currency', '3': 7, '4': 1, '5': 9, '10': 'currency'},
+    const {'1': 'details', '3': 8, '4': 1, '5': 9, '10': 'details'},
+    const {'1': 'accountNumber', '3': 9, '4': 1, '5': 9, '10': 'accountNumber'},
+    const {'1': 'type', '3': 10, '4': 1, '5': 9, '10': 'type'},
+  ],
+};
+
+/// Descriptor for `Transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode('CgtUcmFuc2FjdGlvbhIOCgJpZBgBIAEoBVICaWQSEgoEZGF0ZRgCIAEoCVIEZGF0ZRIWCgZzdGF0dXMYAyABKAlSBnN0YXR1cxIoCg9yZWZlcmVuY2VOdW1iZXIYBCABKAlSD3JlZmVyZW5jZU51bWJlchIQCgNmZWUYBSABKAJSA2ZlZRIWCgZhbW91bnQYBiABKAJSBmFtb3VudBIaCghjdXJyZW5jeRgHIAEoCVIIY3VycmVuY3kSGAoHZGV0YWlscxgIIAEoCVIHZGV0YWlscxIkCg1hY2NvdW50TnVtYmVyGAkgASgJUg1hY2NvdW50TnVtYmVyEhIKBHR5cGUYCiABKAlSBHR5cGU=');
