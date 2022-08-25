@@ -24,6 +24,25 @@ message User {
   string token = 3;
 }
 
+//UPLOAD DOCS
+
+message DocInfo {
+  string laptop_id = 1;
+  string doc_type = 2;
+}
+
+message UploadDocRequest {
+  oneof data {
+    DocInfo info = 1;
+    bytes chunk_data = 2;
+  };
+}
+
+message UploadDocResponse {
+  string id = 1;
+  uint32 size = 2;
+}
+
 // PAYMENT CARDS MODEL
 
 message Cards {
@@ -86,6 +105,10 @@ service Sample {
 
   rpc getCards(User) returns(Cards) {}
   rpc getTransactionsList(TransactionsListRequest) returns(TransactionsList) {}
+
+  //UPLOAD
+
+  rpc UploadImage(stream UploadDocRequest) returns (UploadDocResponse) {};
 }
 
 

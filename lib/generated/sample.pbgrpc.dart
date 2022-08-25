@@ -36,6 +36,12 @@ class SampleClient extends $grpc.Client {
           ($0.TransactionsListRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.TransactionsList.fromBuffer(value));
+  static final _$uploadImage =
+      $grpc.ClientMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
+          '/Sample/UploadImage',
+          ($0.UploadDocRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.UploadDocResponse.fromBuffer(value));
 
   SampleClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -66,6 +72,13 @@ class SampleClient extends $grpc.Client {
       $0.TransactionsListRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getTransactionsList, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.UploadDocResponse> uploadImage(
+      $async.Stream<$0.UploadDocRequest> request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$uploadImage, request, options: options)
+        .single;
   }
 }
 
@@ -110,6 +123,13 @@ abstract class SampleServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.TransactionsListRequest.fromBuffer(value),
             ($0.TransactionsList value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
+        'UploadImage',
+        uploadImage,
+        true,
+        false,
+        ($core.List<$core.int> value) => $0.UploadDocRequest.fromBuffer(value),
+        ($0.UploadDocResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.User> loginWith_Pre(
@@ -147,4 +167,6 @@ abstract class SampleServiceBase extends $grpc.Service {
   $async.Future<$0.Cards> getCards($grpc.ServiceCall call, $0.User request);
   $async.Future<$0.TransactionsList> getTransactionsList(
       $grpc.ServiceCall call, $0.TransactionsListRequest request);
+  $async.Future<$0.UploadDocResponse> uploadImage(
+      $grpc.ServiceCall call, $async.Stream<$0.UploadDocRequest> request);
 }

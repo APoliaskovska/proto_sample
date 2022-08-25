@@ -56,6 +56,42 @@ const User$json = const {
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBIUCgVsb2dpbhgCIAEoCVIFbG9naW4SFAoFdG9rZW4YAyABKAlSBXRva2Vu');
+@$core.Deprecated('Use docInfoDescriptor instead')
+const DocInfo$json = const {
+  '1': 'DocInfo',
+  '2': const [
+    const {'1': 'laptop_id', '3': 1, '4': 1, '5': 9, '10': 'laptopId'},
+    const {'1': 'doc_type', '3': 2, '4': 1, '5': 9, '10': 'docType'},
+  ],
+};
+
+/// Descriptor for `DocInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List docInfoDescriptor = $convert.base64Decode('CgdEb2NJbmZvEhsKCWxhcHRvcF9pZBgBIAEoCVIIbGFwdG9wSWQSGQoIZG9jX3R5cGUYAiABKAlSB2RvY1R5cGU=');
+@$core.Deprecated('Use uploadDocRequestDescriptor instead')
+const UploadDocRequest$json = const {
+  '1': 'UploadDocRequest',
+  '2': const [
+    const {'1': 'info', '3': 1, '4': 1, '5': 11, '6': '.DocInfo', '9': 0, '10': 'info'},
+    const {'1': 'chunk_data', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'chunkData'},
+  ],
+  '8': const [
+    const {'1': 'data'},
+  ],
+};
+
+/// Descriptor for `UploadDocRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadDocRequestDescriptor = $convert.base64Decode('ChBVcGxvYWREb2NSZXF1ZXN0Eh4KBGluZm8YASABKAsyCC5Eb2NJbmZvSABSBGluZm8SHwoKY2h1bmtfZGF0YRgCIAEoDEgAUgljaHVua0RhdGFCBgoEZGF0YQ==');
+@$core.Deprecated('Use uploadDocResponseDescriptor instead')
+const UploadDocResponse$json = const {
+  '1': 'UploadDocResponse',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'size', '3': 2, '4': 1, '5': 13, '10': 'size'},
+  ],
+};
+
+/// Descriptor for `UploadDocResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadDocResponseDescriptor = $convert.base64Decode('ChFVcGxvYWREb2NSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSEgoEc2l6ZRgCIAEoDVIEc2l6ZQ==');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',
