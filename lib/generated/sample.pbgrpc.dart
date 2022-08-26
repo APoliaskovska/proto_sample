@@ -38,7 +38,7 @@ class SampleClient extends $grpc.Client {
               $0.TransactionsList.fromBuffer(value));
   static final _$uploadImage =
       $grpc.ClientMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
-          '/Sample/UploadImage',
+          '/Sample/uploadImage',
           ($0.UploadDocRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.UploadDocResponse.fromBuffer(value));
@@ -124,7 +124,7 @@ abstract class SampleServiceBase extends $grpc.Service {
                 $0.TransactionsListRequest.fromBuffer(value),
             ($0.TransactionsList value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
-        'UploadImage',
+        'uploadImage',
         uploadImage,
         true,
         false,

@@ -108,7 +108,7 @@ service Sample {
 
   //UPLOAD
 
-  rpc UploadImage(stream UploadDocRequest) returns (UploadDocResponse) {};
+  rpc uploadImage(stream UploadDocRequest) returns(UploadDocResponse) {}
 }
 
 
