@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AuthRequest extends $pb.GeneratedMessage {
@@ -309,158 +310,233 @@ class User extends $pb.GeneratedMessage {
   void clearToken() => clearField(3);
 }
 
-class DocInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DocInfo', createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'laptopId')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'docType')
+class FileUploadChunkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileUploadChunkRequest', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uuid')
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chunk', $pb.PbFieldType.OY)
+    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'size', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finished')
     ..hasRequiredFields = false
   ;
 
-  DocInfo._() : super();
-  factory DocInfo({
-    $core.String? laptopId,
-    $core.String? docType,
+  FileUploadChunkRequest._() : super();
+  factory FileUploadChunkRequest({
+    $core.String? uuid,
+    $core.List<$core.int>? chunk,
+    $fixnum.Int64? offset,
+    $fixnum.Int64? size,
+    $core.String? name,
+    $core.String? type,
+    $core.bool? finished,
   }) {
     final _result = create();
-    if (laptopId != null) {
-      _result.laptopId = laptopId;
+    if (uuid != null) {
+      _result.uuid = uuid;
     }
-    if (docType != null) {
-      _result.docType = docType;
+    if (chunk != null) {
+      _result.chunk = chunk;
+    }
+    if (offset != null) {
+      _result.offset = offset;
+    }
+    if (size != null) {
+      _result.size = size;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (finished != null) {
+      _result.finished = finished;
     }
     return _result;
   }
-  factory DocInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DocInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory FileUploadChunkRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileUploadChunkRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  DocInfo clone() => DocInfo()..mergeFromMessage(this);
+  FileUploadChunkRequest clone() => FileUploadChunkRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DocInfo copyWith(void Function(DocInfo) updates) => super.copyWith((message) => updates(message as DocInfo)) as DocInfo; // ignore: deprecated_member_use
+  FileUploadChunkRequest copyWith(void Function(FileUploadChunkRequest) updates) => super.copyWith((message) => updates(message as FileUploadChunkRequest)) as FileUploadChunkRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static DocInfo create() => DocInfo._();
-  DocInfo createEmptyInstance() => create();
-  static $pb.PbList<DocInfo> createRepeated() => $pb.PbList<DocInfo>();
+  static FileUploadChunkRequest create() => FileUploadChunkRequest._();
+  FileUploadChunkRequest createEmptyInstance() => create();
+  static $pb.PbList<FileUploadChunkRequest> createRepeated() => $pb.PbList<FileUploadChunkRequest>();
   @$core.pragma('dart2js:noInline')
-  static DocInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DocInfo>(create);
-  static DocInfo? _defaultInstance;
+  static FileUploadChunkRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileUploadChunkRequest>(create);
+  static FileUploadChunkRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get laptopId => $_getSZ(0);
+  $core.String get uuid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set laptopId($core.String v) { $_setString(0, v); }
+  set uuid($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasLaptopId() => $_has(0);
+  $core.bool hasUuid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLaptopId() => clearField(1);
+  void clearUuid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get docType => $_getSZ(1);
+  $core.List<$core.int> get chunk => $_getN(1);
   @$pb.TagNumber(2)
-  set docType($core.String v) { $_setString(1, v); }
+  set chunk($core.List<$core.int> v) { $_setBytes(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasDocType() => $_has(1);
+  $core.bool hasChunk() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDocType() => clearField(2);
+  void clearChunk() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get offset => $_getI64(2);
+  @$pb.TagNumber(3)
+  set offset($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasOffset() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOffset() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get size => $_getI64(3);
+  @$pb.TagNumber(4)
+  set size($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSize() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSize() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get name => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set name($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearName() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get type => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set type($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasType() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearType() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get finished => $_getBF(6);
+  @$pb.TagNumber(7)
+  set finished($core.bool v) { $_setBool(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasFinished() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearFinished() => clearField(7);
 }
 
-enum UploadDocRequest_Data {
+enum FileUploadChunkResponse_Data {
   info, 
-  chunkData, 
+  isEmpty, 
   notSet
 }
 
-class UploadDocRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, UploadDocRequest_Data> _UploadDocRequest_DataByTag = {
-    1 : UploadDocRequest_Data.info,
-    2 : UploadDocRequest_Data.chunkData,
-    0 : UploadDocRequest_Data.notSet
+class FileUploadChunkResponse extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, FileUploadChunkResponse_Data> _FileUploadChunkResponse_DataByTag = {
+    1 : FileUploadChunkResponse_Data.info,
+    2 : FileUploadChunkResponse_Data.isEmpty,
+    0 : FileUploadChunkResponse_Data.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadDocRequest', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileUploadChunkResponse', createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<DocInfo>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'info', subBuilder: DocInfo.create)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chunkData', $pb.PbFieldType.OY)
+    ..aOM<UploadFileResponse>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'info', subBuilder: UploadFileResponse.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isEmpty', protoName: 'isEmpty')
     ..hasRequiredFields = false
   ;
 
-  UploadDocRequest._() : super();
-  factory UploadDocRequest({
-    DocInfo? info,
-    $core.List<$core.int>? chunkData,
+  FileUploadChunkResponse._() : super();
+  factory FileUploadChunkResponse({
+    UploadFileResponse? info,
+    $core.bool? isEmpty,
   }) {
     final _result = create();
     if (info != null) {
       _result.info = info;
     }
-    if (chunkData != null) {
-      _result.chunkData = chunkData;
+    if (isEmpty != null) {
+      _result.isEmpty = isEmpty;
     }
     return _result;
   }
-  factory UploadDocRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UploadDocRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory FileUploadChunkResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileUploadChunkResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  UploadDocRequest clone() => UploadDocRequest()..mergeFromMessage(this);
+  FileUploadChunkResponse clone() => FileUploadChunkResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UploadDocRequest copyWith(void Function(UploadDocRequest) updates) => super.copyWith((message) => updates(message as UploadDocRequest)) as UploadDocRequest; // ignore: deprecated_member_use
+  FileUploadChunkResponse copyWith(void Function(FileUploadChunkResponse) updates) => super.copyWith((message) => updates(message as FileUploadChunkResponse)) as FileUploadChunkResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static UploadDocRequest create() => UploadDocRequest._();
-  UploadDocRequest createEmptyInstance() => create();
-  static $pb.PbList<UploadDocRequest> createRepeated() => $pb.PbList<UploadDocRequest>();
+  static FileUploadChunkResponse create() => FileUploadChunkResponse._();
+  FileUploadChunkResponse createEmptyInstance() => create();
+  static $pb.PbList<FileUploadChunkResponse> createRepeated() => $pb.PbList<FileUploadChunkResponse>();
   @$core.pragma('dart2js:noInline')
-  static UploadDocRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadDocRequest>(create);
-  static UploadDocRequest? _defaultInstance;
+  static FileUploadChunkResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileUploadChunkResponse>(create);
+  static FileUploadChunkResponse? _defaultInstance;
 
-  UploadDocRequest_Data whichData() => _UploadDocRequest_DataByTag[$_whichOneof(0)]!;
+  FileUploadChunkResponse_Data whichData() => _FileUploadChunkResponse_DataByTag[$_whichOneof(0)]!;
   void clearData() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  DocInfo get info => $_getN(0);
+  UploadFileResponse get info => $_getN(0);
   @$pb.TagNumber(1)
-  set info(DocInfo v) { setField(1, v); }
+  set info(UploadFileResponse v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearInfo() => clearField(1);
   @$pb.TagNumber(1)
-  DocInfo ensureInfo() => $_ensure(0);
+  UploadFileResponse ensureInfo() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$core.int> get chunkData => $_getN(1);
+  $core.bool get isEmpty => $_getBF(1);
   @$pb.TagNumber(2)
-  set chunkData($core.List<$core.int> v) { $_setBytes(1, v); }
+  set isEmpty($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasChunkData() => $_has(1);
+  $core.bool hasIsEmpty() => $_has(1);
   @$pb.TagNumber(2)
-  void clearChunkData() => clearField(2);
+  void clearIsEmpty() => clearField(2);
 }
 
-class UploadDocResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadDocResponse', createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'size', $pb.PbFieldType.O3)
+class UploadFileResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadFileResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'size', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
-  UploadDocResponse._() : super();
-  factory UploadDocResponse({
+  UploadFileResponse._() : super();
+  factory UploadFileResponse({
+    $core.String? url,
     $core.String? id,
-    $core.int? size,
+    $fixnum.Int64? size,
   }) {
     final _result = create();
+    if (url != null) {
+      _result.url = url;
+    }
     if (id != null) {
       _result.id = id;
     }
@@ -469,44 +545,53 @@ class UploadDocResponse extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory UploadDocResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UploadDocResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory UploadFileResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UploadFileResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  UploadDocResponse clone() => UploadDocResponse()..mergeFromMessage(this);
+  UploadFileResponse clone() => UploadFileResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UploadDocResponse copyWith(void Function(UploadDocResponse) updates) => super.copyWith((message) => updates(message as UploadDocResponse)) as UploadDocResponse; // ignore: deprecated_member_use
+  UploadFileResponse copyWith(void Function(UploadFileResponse) updates) => super.copyWith((message) => updates(message as UploadFileResponse)) as UploadFileResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static UploadDocResponse create() => UploadDocResponse._();
-  UploadDocResponse createEmptyInstance() => create();
-  static $pb.PbList<UploadDocResponse> createRepeated() => $pb.PbList<UploadDocResponse>();
+  static UploadFileResponse create() => UploadFileResponse._();
+  UploadFileResponse createEmptyInstance() => create();
+  static $pb.PbList<UploadFileResponse> createRepeated() => $pb.PbList<UploadFileResponse>();
   @$core.pragma('dart2js:noInline')
-  static UploadDocResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadDocResponse>(create);
-  static UploadDocResponse? _defaultInstance;
+  static UploadFileResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadFileResponse>(create);
+  static UploadFileResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
+  $core.String get url => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) { $_setString(0, v); }
+  set url($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
+  $core.bool hasUrl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearUrl() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.int get size => $_getIZ(1);
+  $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set size($core.int v) { $_setSignedInt32(1, v); }
+  set id($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSize() => $_has(1);
+  $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSize() => clearField(2);
+  void clearId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get size => $_getI64(2);
+  @$pb.TagNumber(3)
+  set size($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSize() => clearField(3);
 }
 
 class Cards extends $pb.GeneratedMessage {

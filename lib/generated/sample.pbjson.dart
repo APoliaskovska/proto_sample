@@ -56,42 +56,48 @@ const User$json = const {
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgFUgJpZBIUCgVsb2dpbhgCIAEoCVIFbG9naW4SFAoFdG9rZW4YAyABKAlSBXRva2Vu');
-@$core.Deprecated('Use docInfoDescriptor instead')
-const DocInfo$json = const {
-  '1': 'DocInfo',
+@$core.Deprecated('Use fileUploadChunkRequestDescriptor instead')
+const FileUploadChunkRequest$json = const {
+  '1': 'FileUploadChunkRequest',
   '2': const [
-    const {'1': 'laptop_id', '3': 1, '4': 1, '5': 9, '10': 'laptopId'},
-    const {'1': 'doc_type', '3': 2, '4': 1, '5': 9, '10': 'docType'},
+    const {'1': 'uuid', '3': 1, '4': 1, '5': 9, '10': 'uuid'},
+    const {'1': 'chunk', '3': 2, '4': 1, '5': 12, '10': 'chunk'},
+    const {'1': 'offset', '3': 3, '4': 1, '5': 4, '10': 'offset'},
+    const {'1': 'size', '3': 4, '4': 1, '5': 4, '10': 'size'},
+    const {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'type', '3': 6, '4': 1, '5': 9, '10': 'type'},
+    const {'1': 'finished', '3': 7, '4': 1, '5': 8, '10': 'finished'},
   ],
 };
 
-/// Descriptor for `DocInfo`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List docInfoDescriptor = $convert.base64Decode('CgdEb2NJbmZvEhsKCWxhcHRvcF9pZBgBIAEoCVIIbGFwdG9wSWQSGQoIZG9jX3R5cGUYAiABKAlSB2RvY1R5cGU=');
-@$core.Deprecated('Use uploadDocRequestDescriptor instead')
-const UploadDocRequest$json = const {
-  '1': 'UploadDocRequest',
+/// Descriptor for `FileUploadChunkRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileUploadChunkRequestDescriptor = $convert.base64Decode('ChZGaWxlVXBsb2FkQ2h1bmtSZXF1ZXN0EhIKBHV1aWQYASABKAlSBHV1aWQSFAoFY2h1bmsYAiABKAxSBWNodW5rEhYKBm9mZnNldBgDIAEoBFIGb2Zmc2V0EhIKBHNpemUYBCABKARSBHNpemUSEgoEbmFtZRgFIAEoCVIEbmFtZRISCgR0eXBlGAYgASgJUgR0eXBlEhoKCGZpbmlzaGVkGAcgASgIUghmaW5pc2hlZA==');
+@$core.Deprecated('Use fileUploadChunkResponseDescriptor instead')
+const FileUploadChunkResponse$json = const {
+  '1': 'FileUploadChunkResponse',
   '2': const [
-    const {'1': 'info', '3': 1, '4': 1, '5': 11, '6': '.DocInfo', '9': 0, '10': 'info'},
-    const {'1': 'chunk_data', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'chunkData'},
+    const {'1': 'info', '3': 1, '4': 1, '5': 11, '6': '.UploadFileResponse', '9': 0, '10': 'info'},
+    const {'1': 'isEmpty', '3': 2, '4': 1, '5': 8, '9': 0, '10': 'isEmpty'},
   ],
   '8': const [
     const {'1': 'data'},
   ],
 };
 
-/// Descriptor for `UploadDocRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List uploadDocRequestDescriptor = $convert.base64Decode('ChBVcGxvYWREb2NSZXF1ZXN0Eh4KBGluZm8YASABKAsyCC5Eb2NJbmZvSABSBGluZm8SHwoKY2h1bmtfZGF0YRgCIAEoDEgAUgljaHVua0RhdGFCBgoEZGF0YQ==');
-@$core.Deprecated('Use uploadDocResponseDescriptor instead')
-const UploadDocResponse$json = const {
-  '1': 'UploadDocResponse',
+/// Descriptor for `FileUploadChunkResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileUploadChunkResponseDescriptor = $convert.base64Decode('ChdGaWxlVXBsb2FkQ2h1bmtSZXNwb25zZRIpCgRpbmZvGAEgASgLMhMuVXBsb2FkRmlsZVJlc3BvbnNlSABSBGluZm8SGgoHaXNFbXB0eRgCIAEoCEgAUgdpc0VtcHR5QgYKBGRhdGE=');
+@$core.Deprecated('Use uploadFileResponseDescriptor instead')
+const UploadFileResponse$json = const {
+  '1': 'UploadFileResponse',
   '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'size', '3': 2, '4': 1, '5': 5, '10': 'size'},
+    const {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    const {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'size', '3': 3, '4': 1, '5': 4, '10': 'size'},
   ],
 };
 
-/// Descriptor for `UploadDocResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List uploadDocResponseDescriptor = $convert.base64Decode('ChFVcGxvYWREb2NSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSEgoEc2l6ZRgCIAEoBVIEc2l6ZQ==');
+/// Descriptor for `UploadFileResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadFileResponseDescriptor = $convert.base64Decode('ChJVcGxvYWRGaWxlUmVzcG9uc2USEAoDdXJsGAEgASgJUgN1cmwSDgoCaWQYAiABKAlSAmlkEhIKBHNpemUYAyABKARSBHNpemU=');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',

@@ -36,12 +36,12 @@ class SampleClient extends $grpc.Client {
           ($0.TransactionsListRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.TransactionsList.fromBuffer(value));
-  static final _$uploadImage =
-      $grpc.ClientMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
-          '/Sample/uploadImage',
-          ($0.UploadDocRequest value) => value.writeToBuffer(),
+  static final _$uploadFileChunk =
+      $grpc.ClientMethod<$0.FileUploadChunkRequest, $0.FileUploadChunkResponse>(
+          '/Sample/uploadFileChunk',
+          ($0.FileUploadChunkRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              $0.UploadDocResponse.fromBuffer(value));
+              $0.FileUploadChunkResponse.fromBuffer(value));
 
   SampleClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -74,11 +74,10 @@ class SampleClient extends $grpc.Client {
     return $createUnaryCall(_$getTransactionsList, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.UploadDocResponse> uploadImage(
-      $async.Stream<$0.UploadDocRequest> request,
+  $grpc.ResponseFuture<$0.FileUploadChunkResponse> uploadFileChunk(
+      $0.FileUploadChunkRequest request,
       {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$uploadImage, request, options: options)
-        .single;
+    return $createUnaryCall(_$uploadFileChunk, request, options: options);
   }
 }
 
@@ -123,13 +122,15 @@ abstract class SampleServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.TransactionsListRequest.fromBuffer(value),
             ($0.TransactionsList value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UploadDocRequest, $0.UploadDocResponse>(
-        'uploadImage',
-        uploadImage,
-        true,
+    $addMethod($grpc.ServiceMethod<$0.FileUploadChunkRequest,
+            $0.FileUploadChunkResponse>(
+        'uploadFileChunk',
+        uploadFileChunk_Pre,
         false,
-        ($core.List<$core.int> value) => $0.UploadDocRequest.fromBuffer(value),
-        ($0.UploadDocResponse value) => value.writeToBuffer()));
+        false,
+        ($core.List<$core.int> value) =>
+            $0.FileUploadChunkRequest.fromBuffer(value),
+        ($0.FileUploadChunkResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.User> loginWith_Pre(
@@ -158,6 +159,12 @@ abstract class SampleServiceBase extends $grpc.Service {
     return getTransactionsList(call, await request);
   }
 
+  $async.Future<$0.FileUploadChunkResponse> uploadFileChunk_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.FileUploadChunkRequest> request) async {
+    return uploadFileChunk(call, await request);
+  }
+
   $async.Future<$0.User> loginWith(
       $grpc.ServiceCall call, $0.AuthRequest request);
   $async.Future<$0.UserDetails> getUserDetails(
@@ -167,6 +174,6 @@ abstract class SampleServiceBase extends $grpc.Service {
   $async.Future<$0.Cards> getCards($grpc.ServiceCall call, $0.User request);
   $async.Future<$0.TransactionsList> getTransactionsList(
       $grpc.ServiceCall call, $0.TransactionsListRequest request);
-  $async.Future<$0.UploadDocResponse> uploadImage(
-      $grpc.ServiceCall call, $async.Stream<$0.UploadDocRequest> request);
+  $async.Future<$0.FileUploadChunkResponse> uploadFileChunk(
+      $grpc.ServiceCall call, $0.FileUploadChunkRequest request);
 }
