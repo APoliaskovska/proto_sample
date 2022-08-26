@@ -40,7 +40,7 @@ message UploadDocRequest {
 
 message UploadDocResponse {
   string id = 1;
-  uint32 size = 2;
+  int32 size = 2;
 }
 
 // PAYMENT CARDS MODEL

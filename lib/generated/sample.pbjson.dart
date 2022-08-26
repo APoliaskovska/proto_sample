@@ -86,12 +86,12 @@ const UploadDocResponse$json = const {
   '1': 'UploadDocResponse',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'size', '3': 2, '4': 1, '5': 13, '10': 'size'},
+    const {'1': 'size', '3': 2, '4': 1, '5': 5, '10': 'size'},
   ],
 };
 
 /// Descriptor for `UploadDocResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List uploadDocResponseDescriptor = $convert.base64Decode('ChFVcGxvYWREb2NSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSEgoEc2l6ZRgCIAEoDVIEc2l6ZQ==');
+final $typed_data.Uint8List uploadDocResponseDescriptor = $convert.base64Decode('ChFVcGxvYWREb2NSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSEgoEc2l6ZRgCIAEoBVIEc2l6ZQ==');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',

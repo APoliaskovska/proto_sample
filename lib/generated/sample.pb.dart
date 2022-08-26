@@ -451,7 +451,7 @@ class UploadDocRequest extends $pb.GeneratedMessage {
 class UploadDocResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadDocResponse', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'size', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'size', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -502,7 +502,7 @@ class UploadDocResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get size => $_getIZ(1);
   @$pb.TagNumber(2)
-  set size($core.int v) { $_setUnsignedInt32(1, v); }
+  set size($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasSize() => $_has(1);
   @$pb.TagNumber(2)
