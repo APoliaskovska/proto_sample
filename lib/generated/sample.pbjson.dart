@@ -135,12 +135,12 @@ const FilesFromFoldersResponse$json = const {
   '1': 'FilesFromFoldersResponse',
   '2': const [
     const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
-    const {'1': 'files', '3': 2, '4': 3, '5': 11, '6': '.File', '10': 'files'},
+    const {'1': 'files', '3': 2, '4': 3, '5': 11, '6': '.FileObject', '10': 'files'},
   ],
 };
 
 /// Descriptor for `FilesFromFoldersResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List filesFromFoldersResponseDescriptor = $convert.base64Decode('ChhGaWxlc0Zyb21Gb2xkZXJzUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhsKBWZpbGVzGAIgAygLMgUuRmlsZVIFZmlsZXM=');
+final $typed_data.Uint8List filesFromFoldersResponseDescriptor = $convert.base64Decode('ChhGaWxlc0Zyb21Gb2xkZXJzUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEiEKBWZpbGVzGAIgAygLMgsuRmlsZU9iamVjdFIFZmlsZXM=');
 @$core.Deprecated('Use fileFolderDescriptor instead')
 const FileFolder$json = const {
   '1': 'FileFolder',
@@ -155,9 +155,9 @@ const FileFolder$json = const {
 
 /// Descriptor for `FileFolder`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fileFolderDescriptor = $convert.base64Decode('CgpGaWxlRm9sZGVyEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhIWCgZhY2Nlc3MYBCABKAlSBmFjY2VzcxIaCghmaWxlc0lkcxgFIAMoBVIIZmlsZXNJZHM=');
-@$core.Deprecated('Use fileDescriptor instead')
-const File$json = const {
-  '1': 'File',
+@$core.Deprecated('Use fileObjectDescriptor instead')
+const FileObject$json = const {
+  '1': 'FileObject',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
@@ -167,8 +167,8 @@ const File$json = const {
   ],
 };
 
-/// Descriptor for `File`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fileDescriptor = $convert.base64Decode('CgRGaWxlEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhYKBmZvcm1hdBgDIAEoCVIGZm9ybWF0EhAKA3VybBgEIAEoCVIDdXJsEhYKBmFjY2VzcxgFIAEoCVIGYWNjZXNz');
+/// Descriptor for `FileObject`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileObjectDescriptor = $convert.base64Decode('CgpGaWxlT2JqZWN0Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhYKBmZvcm1hdBgDIAEoCVIGZm9ybWF0EhAKA3VybBgEIAEoCVIDdXJsEhYKBmFjY2VzcxgFIAEoCVIGYWNjZXNz');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',

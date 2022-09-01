@@ -67,7 +67,7 @@ message FilesFromFoldersRequest {
 
 message FilesFromFoldersResponse {
   string user_id = 1;
-  repeated File files = 2;
+  repeated FileObject files = 2;
 }
 
 message FileFolder {
@@ -78,7 +78,7 @@ message FileFolder {
   repeated int32 filesIds = 5;
 }
 
-message File {
+message FileObject {
   string id = 1;
   string name = 2;
   string format = 3;

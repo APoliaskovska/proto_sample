@@ -760,14 +760,14 @@ class FilesFromFoldersRequest extends $pb.GeneratedMessage {
 class FilesFromFoldersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilesFromFoldersResponse', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
-    ..pc<File>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'files', $pb.PbFieldType.PM, subBuilder: File.create)
+    ..pc<FileObject>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'files', $pb.PbFieldType.PM, subBuilder: FileObject.create)
     ..hasRequiredFields = false
   ;
 
   FilesFromFoldersResponse._() : super();
   factory FilesFromFoldersResponse({
     $core.String? userId,
-    $core.Iterable<File>? files,
+    $core.Iterable<FileObject>? files,
   }) {
     final _result = create();
     if (userId != null) {
@@ -809,7 +809,7 @@ class FilesFromFoldersResponse extends $pb.GeneratedMessage {
   void clearUserId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<File> get files => $_getList(1);
+  $core.List<FileObject> get files => $_getList(1);
 }
 
 class FileFolder extends $pb.GeneratedMessage {
@@ -909,8 +909,8 @@ class FileFolder extends $pb.GeneratedMessage {
   $core.List<$core.int> get filesIds => $_getList(4);
 }
 
-class File extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'File', createEmptyInstance: create)
+class FileObject extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileObject', createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'format')
@@ -919,8 +919,8 @@ class File extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  File._() : super();
-  factory File({
+  FileObject._() : super();
+  factory FileObject({
     $core.String? id,
     $core.String? name,
     $core.String? format,
@@ -945,26 +945,26 @@ class File extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory File.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory File.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory FileObject.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileObject.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  File clone() => File()..mergeFromMessage(this);
+  FileObject clone() => FileObject()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  File copyWith(void Function(File) updates) => super.copyWith((message) => updates(message as File)) as File; // ignore: deprecated_member_use
+  FileObject copyWith(void Function(FileObject) updates) => super.copyWith((message) => updates(message as FileObject)) as FileObject; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static File create() => File._();
-  File createEmptyInstance() => create();
-  static $pb.PbList<File> createRepeated() => $pb.PbList<File>();
+  static FileObject create() => FileObject._();
+  FileObject createEmptyInstance() => create();
+  static $pb.PbList<FileObject> createRepeated() => $pb.PbList<FileObject>();
   @$core.pragma('dart2js:noInline')
-  static File getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<File>(create);
-  static File? _defaultInstance;
+  static FileObject getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileObject>(create);
+  static FileObject? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
