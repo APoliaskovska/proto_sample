@@ -594,6 +594,424 @@ class UploadFileResponse extends $pb.GeneratedMessage {
   void clearSize() => clearField(3);
 }
 
+class FileFoldersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileFoldersRequest', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
+    ..hasRequiredFields = false
+  ;
+
+  FileFoldersRequest._() : super();
+  factory FileFoldersRequest({
+    $core.String? userId,
+  }) {
+    final _result = create();
+    if (userId != null) {
+      _result.userId = userId;
+    }
+    return _result;
+  }
+  factory FileFoldersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileFoldersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FileFoldersRequest clone() => FileFoldersRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FileFoldersRequest copyWith(void Function(FileFoldersRequest) updates) => super.copyWith((message) => updates(message as FileFoldersRequest)) as FileFoldersRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FileFoldersRequest create() => FileFoldersRequest._();
+  FileFoldersRequest createEmptyInstance() => create();
+  static $pb.PbList<FileFoldersRequest> createRepeated() => $pb.PbList<FileFoldersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static FileFoldersRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileFoldersRequest>(create);
+  static FileFoldersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+}
+
+class FileFoldersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileFoldersResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
+    ..pc<FileFolder>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'folders', $pb.PbFieldType.PM, subBuilder: FileFolder.create)
+    ..hasRequiredFields = false
+  ;
+
+  FileFoldersResponse._() : super();
+  factory FileFoldersResponse({
+    $core.String? userId,
+    $core.Iterable<FileFolder>? folders,
+  }) {
+    final _result = create();
+    if (userId != null) {
+      _result.userId = userId;
+    }
+    if (folders != null) {
+      _result.folders.addAll(folders);
+    }
+    return _result;
+  }
+  factory FileFoldersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileFoldersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FileFoldersResponse clone() => FileFoldersResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FileFoldersResponse copyWith(void Function(FileFoldersResponse) updates) => super.copyWith((message) => updates(message as FileFoldersResponse)) as FileFoldersResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FileFoldersResponse create() => FileFoldersResponse._();
+  FileFoldersResponse createEmptyInstance() => create();
+  static $pb.PbList<FileFoldersResponse> createRepeated() => $pb.PbList<FileFoldersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FileFoldersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileFoldersResponse>(create);
+  static FileFoldersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<FileFolder> get folders => $_getList(1);
+}
+
+class FilesFromFoldersRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilesFromFoldersRequest', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'folderId')
+    ..hasRequiredFields = false
+  ;
+
+  FilesFromFoldersRequest._() : super();
+  factory FilesFromFoldersRequest({
+    $core.String? userId,
+    $core.String? folderId,
+  }) {
+    final _result = create();
+    if (userId != null) {
+      _result.userId = userId;
+    }
+    if (folderId != null) {
+      _result.folderId = folderId;
+    }
+    return _result;
+  }
+  factory FilesFromFoldersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FilesFromFoldersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FilesFromFoldersRequest clone() => FilesFromFoldersRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FilesFromFoldersRequest copyWith(void Function(FilesFromFoldersRequest) updates) => super.copyWith((message) => updates(message as FilesFromFoldersRequest)) as FilesFromFoldersRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FilesFromFoldersRequest create() => FilesFromFoldersRequest._();
+  FilesFromFoldersRequest createEmptyInstance() => create();
+  static $pb.PbList<FilesFromFoldersRequest> createRepeated() => $pb.PbList<FilesFromFoldersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static FilesFromFoldersRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FilesFromFoldersRequest>(create);
+  static FilesFromFoldersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get folderId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set folderId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFolderId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFolderId() => clearField(2);
+}
+
+class FilesFromFoldersResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilesFromFoldersResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
+    ..pc<File>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'files', $pb.PbFieldType.PM, subBuilder: File.create)
+    ..hasRequiredFields = false
+  ;
+
+  FilesFromFoldersResponse._() : super();
+  factory FilesFromFoldersResponse({
+    $core.String? userId,
+    $core.Iterable<File>? files,
+  }) {
+    final _result = create();
+    if (userId != null) {
+      _result.userId = userId;
+    }
+    if (files != null) {
+      _result.files.addAll(files);
+    }
+    return _result;
+  }
+  factory FilesFromFoldersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FilesFromFoldersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FilesFromFoldersResponse clone() => FilesFromFoldersResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FilesFromFoldersResponse copyWith(void Function(FilesFromFoldersResponse) updates) => super.copyWith((message) => updates(message as FilesFromFoldersResponse)) as FilesFromFoldersResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FilesFromFoldersResponse create() => FilesFromFoldersResponse._();
+  FilesFromFoldersResponse createEmptyInstance() => create();
+  static $pb.PbList<FilesFromFoldersResponse> createRepeated() => $pb.PbList<FilesFromFoldersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FilesFromFoldersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FilesFromFoldersResponse>(create);
+  static FilesFromFoldersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<File> get files => $_getList(1);
+}
+
+class FileFolder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FileFolder', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'access')
+    ..p<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filesIds', $pb.PbFieldType.K3, protoName: 'filesIds')
+    ..hasRequiredFields = false
+  ;
+
+  FileFolder._() : super();
+  factory FileFolder({
+    $core.String? id,
+    $core.String? name,
+    $core.String? description,
+    $core.String? access,
+    $core.Iterable<$core.int>? filesIds,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (access != null) {
+      _result.access = access;
+    }
+    if (filesIds != null) {
+      _result.filesIds.addAll(filesIds);
+    }
+    return _result;
+  }
+  factory FileFolder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileFolder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FileFolder clone() => FileFolder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FileFolder copyWith(void Function(FileFolder) updates) => super.copyWith((message) => updates(message as FileFolder)) as FileFolder; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FileFolder create() => FileFolder._();
+  FileFolder createEmptyInstance() => create();
+  static $pb.PbList<FileFolder> createRepeated() => $pb.PbList<FileFolder>();
+  @$core.pragma('dart2js:noInline')
+  static FileFolder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileFolder>(create);
+  static FileFolder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set description($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDescription() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get access => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set access($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAccess() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAccess() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.int> get filesIds => $_getList(4);
+}
+
+class File extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'File', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'format')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'access')
+    ..hasRequiredFields = false
+  ;
+
+  File._() : super();
+  factory File({
+    $core.String? id,
+    $core.String? name,
+    $core.String? format,
+    $core.String? url,
+    $core.String? access,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (format != null) {
+      _result.format = format;
+    }
+    if (url != null) {
+      _result.url = url;
+    }
+    if (access != null) {
+      _result.access = access;
+    }
+    return _result;
+  }
+  factory File.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory File.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  File clone() => File()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  File copyWith(void Function(File) updates) => super.copyWith((message) => updates(message as File)) as File; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static File create() => File._();
+  File createEmptyInstance() => create();
+  static $pb.PbList<File> createRepeated() => $pb.PbList<File>();
+  @$core.pragma('dart2js:noInline')
+  static File getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<File>(create);
+  static File? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get format => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set format($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFormat() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFormat() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get url => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set url($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUrl() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUrl() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get access => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set access($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasAccess() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAccess() => clearField(5);
+}
+
 class Cards extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Cards', createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)

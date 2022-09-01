@@ -49,6 +49,43 @@ message UploadFileResponse {
   uint64 size = 3;
 }
 
+//DOWNLOAD DOCS
+
+message FileFoldersRequest {
+  string user_id = 1;
+}
+
+message FileFoldersResponse {
+  string user_id = 1;
+  repeated FileFolder folders = 2;
+}
+
+message FilesFromFoldersRequest {
+  string user_id = 1;
+  string folder_id = 2;
+}
+
+message FilesFromFoldersResponse {
+  string user_id = 1;
+  repeated File files = 2;
+}
+
+message FileFolder {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string access = 4;
+  repeated int32 filesIds = 5;
+}
+
+message File {
+  string id = 1;
+  string name = 2;
+  string format = 3;
+  string url = 4;
+  string access = 5;
+}
+
 // PAYMENT CARDS MODEL
 
 message Cards {
@@ -115,6 +152,11 @@ service Sample {
   //UPLOAD
 
   rpc uploadFileChunk(FileUploadChunkRequest) returns (FileUploadChunkResponse) {}
+
+  //DOWNLOAD
+
+  rpc getFileFolders(FileFoldersRequest) returns (FileFoldersResponse) {}
+  rpc getFilesFromFolder(FilesFromFoldersRequest) returns (FilesFromFoldersResponse) {}
 }
 
 

@@ -98,6 +98,77 @@ const UploadFileResponse$json = const {
 
 /// Descriptor for `UploadFileResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List uploadFileResponseDescriptor = $convert.base64Decode('ChJVcGxvYWRGaWxlUmVzcG9uc2USEAoDdXJsGAEgASgJUgN1cmwSDgoCaWQYAiABKAlSAmlkEhIKBHNpemUYAyABKARSBHNpemU=');
+@$core.Deprecated('Use fileFoldersRequestDescriptor instead')
+const FileFoldersRequest$json = const {
+  '1': 'FileFoldersRequest',
+  '2': const [
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `FileFoldersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileFoldersRequestDescriptor = $convert.base64Decode('ChJGaWxlRm9sZGVyc1JlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
+@$core.Deprecated('Use fileFoldersResponseDescriptor instead')
+const FileFoldersResponse$json = const {
+  '1': 'FileFoldersResponse',
+  '2': const [
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    const {'1': 'folders', '3': 2, '4': 3, '5': 11, '6': '.FileFolder', '10': 'folders'},
+  ],
+};
+
+/// Descriptor for `FileFoldersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileFoldersResponseDescriptor = $convert.base64Decode('ChNGaWxlRm9sZGVyc1Jlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIlCgdmb2xkZXJzGAIgAygLMgsuRmlsZUZvbGRlclIHZm9sZGVycw==');
+@$core.Deprecated('Use filesFromFoldersRequestDescriptor instead')
+const FilesFromFoldersRequest$json = const {
+  '1': 'FilesFromFoldersRequest',
+  '2': const [
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    const {'1': 'folder_id', '3': 2, '4': 1, '5': 9, '10': 'folderId'},
+  ],
+};
+
+/// Descriptor for `FilesFromFoldersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List filesFromFoldersRequestDescriptor = $convert.base64Decode('ChdGaWxlc0Zyb21Gb2xkZXJzUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSGwoJZm9sZGVyX2lkGAIgASgJUghmb2xkZXJJZA==');
+@$core.Deprecated('Use filesFromFoldersResponseDescriptor instead')
+const FilesFromFoldersResponse$json = const {
+  '1': 'FilesFromFoldersResponse',
+  '2': const [
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    const {'1': 'files', '3': 2, '4': 3, '5': 11, '6': '.File', '10': 'files'},
+  ],
+};
+
+/// Descriptor for `FilesFromFoldersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List filesFromFoldersResponseDescriptor = $convert.base64Decode('ChhGaWxlc0Zyb21Gb2xkZXJzUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhsKBWZpbGVzGAIgAygLMgUuRmlsZVIFZmlsZXM=');
+@$core.Deprecated('Use fileFolderDescriptor instead')
+const FileFolder$json = const {
+  '1': 'FileFolder',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    const {'1': 'access', '3': 4, '4': 1, '5': 9, '10': 'access'},
+    const {'1': 'filesIds', '3': 5, '4': 3, '5': 5, '10': 'filesIds'},
+  ],
+};
+
+/// Descriptor for `FileFolder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileFolderDescriptor = $convert.base64Decode('CgpGaWxlRm9sZGVyEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhIWCgZhY2Nlc3MYBCABKAlSBmFjY2VzcxIaCghmaWxlc0lkcxgFIAMoBVIIZmlsZXNJZHM=');
+@$core.Deprecated('Use fileDescriptor instead')
+const File$json = const {
+  '1': 'File',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'format', '3': 3, '4': 1, '5': 9, '10': 'format'},
+    const {'1': 'url', '3': 4, '4': 1, '5': 9, '10': 'url'},
+    const {'1': 'access', '3': 5, '4': 1, '5': 9, '10': 'access'},
+  ],
+};
+
+/// Descriptor for `File`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileDescriptor = $convert.base64Decode('CgRGaWxlEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhYKBmZvcm1hdBgDIAEoCVIGZm9ybWF0EhAKA3VybBgEIAEoCVIDdXJsEhYKBmFjY2VzcxgFIAEoCVIGYWNjZXNz');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',

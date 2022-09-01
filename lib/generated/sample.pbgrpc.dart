@@ -42,6 +42,18 @@ class SampleClient extends $grpc.Client {
           ($0.FileUploadChunkRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.FileUploadChunkResponse.fromBuffer(value));
+  static final _$getFileFolders =
+      $grpc.ClientMethod<$0.FileFoldersRequest, $0.FileFoldersResponse>(
+          '/Sample/getFileFolders',
+          ($0.FileFoldersRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.FileFoldersResponse.fromBuffer(value));
+  static final _$getFilesFromFolder = $grpc.ClientMethod<
+          $0.FilesFromFoldersRequest, $0.FilesFromFoldersResponse>(
+      '/Sample/getFilesFromFolder',
+      ($0.FilesFromFoldersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.FilesFromFoldersResponse.fromBuffer(value));
 
   SampleClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -78,6 +90,18 @@ class SampleClient extends $grpc.Client {
       $0.FileUploadChunkRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$uploadFileChunk, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.FileFoldersResponse> getFileFolders(
+      $0.FileFoldersRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFileFolders, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.FilesFromFoldersResponse> getFilesFromFolder(
+      $0.FilesFromFoldersRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFilesFromFolder, request, options: options);
   }
 }
 
@@ -131,6 +155,24 @@ abstract class SampleServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.FileUploadChunkRequest.fromBuffer(value),
         ($0.FileUploadChunkResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.FileFoldersRequest, $0.FileFoldersResponse>(
+            'getFileFolders',
+            getFileFolders_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.FileFoldersRequest.fromBuffer(value),
+            ($0.FileFoldersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.FilesFromFoldersRequest,
+            $0.FilesFromFoldersResponse>(
+        'getFilesFromFolder',
+        getFilesFromFolder_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.FilesFromFoldersRequest.fromBuffer(value),
+        ($0.FilesFromFoldersResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.User> loginWith_Pre(
@@ -165,6 +207,18 @@ abstract class SampleServiceBase extends $grpc.Service {
     return uploadFileChunk(call, await request);
   }
 
+  $async.Future<$0.FileFoldersResponse> getFileFolders_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.FileFoldersRequest> request) async {
+    return getFileFolders(call, await request);
+  }
+
+  $async.Future<$0.FilesFromFoldersResponse> getFilesFromFolder_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.FilesFromFoldersRequest> request) async {
+    return getFilesFromFolder(call, await request);
+  }
+
   $async.Future<$0.User> loginWith(
       $grpc.ServiceCall call, $0.AuthRequest request);
   $async.Future<$0.UserDetails> getUserDetails(
@@ -176,4 +230,8 @@ abstract class SampleServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.TransactionsListRequest request);
   $async.Future<$0.FileUploadChunkResponse> uploadFileChunk(
       $grpc.ServiceCall call, $0.FileUploadChunkRequest request);
+  $async.Future<$0.FileFoldersResponse> getFileFolders(
+      $grpc.ServiceCall call, $0.FileFoldersRequest request);
+  $async.Future<$0.FilesFromFoldersResponse> getFilesFromFolder(
+      $grpc.ServiceCall call, $0.FilesFromFoldersRequest request);
 }
