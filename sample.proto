@@ -86,6 +86,17 @@ message FileObject {
   string access = 5;
 }
 
+message DownloadFileRequest{
+  string user_id = 1;
+  string file_id = 2;
+}
+
+message FileData {
+  string id = 1;
+  bytes data = 3;
+  string format = 2;
+}
+
 // PAYMENT CARDS MODEL
 
 message Cards {
@@ -157,6 +168,7 @@ service Sample {
 
   rpc getFileFolders(FileFoldersRequest) returns (FileFoldersResponse) {}
   rpc getFilesFromFolder(FilesFromFoldersRequest) returns (FilesFromFoldersResponse) {}
+  rpc downloadFile(DownloadFileRequest) returns (stream FileData){}
 }
 
 
