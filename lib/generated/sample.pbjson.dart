@@ -169,6 +169,29 @@ const FileObject$json = const {
 
 /// Descriptor for `FileObject`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fileObjectDescriptor = $convert.base64Decode('CgpGaWxlT2JqZWN0Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhYKBmZvcm1hdBgDIAEoCVIGZm9ybWF0EhAKA3VybBgEIAEoCVIDdXJsEhYKBmFjY2VzcxgFIAEoCVIGYWNjZXNz');
+@$core.Deprecated('Use downloadFileRequestDescriptor instead')
+const DownloadFileRequest$json = const {
+  '1': 'DownloadFileRequest',
+  '2': const [
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    const {'1': 'file_id', '3': 2, '4': 1, '5': 9, '10': 'fileId'},
+  ],
+};
+
+/// Descriptor for `DownloadFileRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List downloadFileRequestDescriptor = $convert.base64Decode('ChNEb3dubG9hZEZpbGVSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIXCgdmaWxlX2lkGAIgASgJUgZmaWxlSWQ=');
+@$core.Deprecated('Use fileDataDescriptor instead')
+const FileData$json = const {
+  '1': 'FileData',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'data', '3': 3, '4': 1, '5': 12, '10': 'data'},
+    const {'1': 'format', '3': 2, '4': 1, '5': 9, '10': 'format'},
+  ],
+};
+
+/// Descriptor for `FileData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileDataDescriptor = $convert.base64Decode('CghGaWxlRGF0YRIOCgJpZBgBIAEoCVICaWQSEgoEZGF0YRgDIAEoDFIEZGF0YRIWCgZmb3JtYXQYAiABKAlSBmZvcm1hdA==');
 @$core.Deprecated('Use cardsDescriptor instead')
 const Cards$json = const {
   '1': 'Cards',

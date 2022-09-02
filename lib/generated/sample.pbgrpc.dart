@@ -54,6 +54,11 @@ class SampleClient extends $grpc.Client {
       ($0.FilesFromFoldersRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.FilesFromFoldersResponse.fromBuffer(value));
+  static final _$downloadFile =
+      $grpc.ClientMethod<$0.DownloadFileRequest, $0.FileData>(
+          '/Sample/downloadFile',
+          ($0.DownloadFileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.FileData.fromBuffer(value));
 
   SampleClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -102,6 +107,13 @@ class SampleClient extends $grpc.Client {
       $0.FilesFromFoldersRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getFilesFromFolder, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.FileData> downloadFile($0.DownloadFileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$downloadFile, $async.Stream.fromIterable([request]),
+        options: options);
   }
 }
 
@@ -173,6 +185,14 @@ abstract class SampleServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.FilesFromFoldersRequest.fromBuffer(value),
         ($0.FilesFromFoldersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DownloadFileRequest, $0.FileData>(
+        'downloadFile',
+        downloadFile_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.DownloadFileRequest.fromBuffer(value),
+        ($0.FileData value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.User> loginWith_Pre(
@@ -219,6 +239,11 @@ abstract class SampleServiceBase extends $grpc.Service {
     return getFilesFromFolder(call, await request);
   }
 
+  $async.Stream<$0.FileData> downloadFile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DownloadFileRequest> request) async* {
+    yield* downloadFile(call, await request);
+  }
+
   $async.Future<$0.User> loginWith(
       $grpc.ServiceCall call, $0.AuthRequest request);
   $async.Future<$0.UserDetails> getUserDetails(
@@ -234,4 +259,6 @@ abstract class SampleServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.FileFoldersRequest request);
   $async.Future<$0.FilesFromFoldersResponse> getFilesFromFolder(
       $grpc.ServiceCall call, $0.FilesFromFoldersRequest request);
+  $async.Stream<$0.FileData> downloadFile(
+      $grpc.ServiceCall call, $0.DownloadFileRequest request);
 }
